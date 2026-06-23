@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Talks — Jesugnon Koumagnon</title>
+<link rel="icon" href="favicon.ico" sizes="any">
+<link rel="icon" type="image/png" href="favicon-32.png" sizes="32x32">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<meta property="og:title" content="Talks — Jesugnon Koumagnon">
+<meta property="og:description" content="Presentations and academic activity — African School of Economics, UNICEF, IMF, World Bank.">
+<meta property="og:image" content="og-image.jpg">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="og-image.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#1C1B19; --paper:#F7F3EC; --paper-warm:#F0EAE0;
+    --sienna:#C0532D; --savanna:#3D5A45; --gray:#8A8275; --line:rgba(28,27,25,0.14);
+    --serif:'Fraunces',serif; --sans:'Inter',sans-serif; --mono:'JetBrains Mono',monospace;
+  }
+  *{margin:0;padding:0;box-sizing:border-box;}
+  body{background:var(--paper); color:var(--ink); font-family:var(--sans); line-height:1.6; -webkit-font-smoothing:antialiased;}
+  a{color:inherit; text-decoration:none;}
+  @media (prefers-reduced-motion: reduce){*{animation-duration:0.01ms !important; transition-duration:0.01ms !important;}}
+
+  nav{position:sticky; top:0; z-index:50; display:flex; align-items:center; justify-content:space-between;
+    padding:22px 48px; background:rgba(247,243,236,0.88); backdrop-filter:blur(8px); border-bottom:1px solid var(--line);}
+  .nav-name{font-family:var(--serif); font-weight:600; font-size:18px;}
+  .nav-links{display:flex; gap:34px; font-size:14px; font-weight:500;}
+  .nav-links a{position:relative; opacity:0.72; transition:opacity .2s;}
+  .nav-links a:hover{opacity:1;}
+  .nav-links a.active{opacity:1;}
+  .nav-links a.active::after{content:''; position:absolute; left:0; right:0; bottom:-6px; height:2px; background:var(--sienna);}
+  @media (max-width:560px){nav{padding:16px 20px;} .nav-links{gap:16px; font-size:12.5px;}}
+
+  .page-head{padding:70px 48px 40px; max-width:1180px; margin:0 auto;}
+  .eyebrow{font-family:var(--mono); font-size:12.5px; letter-spacing:0.08em; color:var(--sienna); text-transform:uppercase; margin-bottom:16px; display:flex; align-items:center; gap:10px;}
+  .eyebrow::before{content:''; width:18px; height:1px; background:var(--sienna);}
+  .page-head h1{font-family:var(--serif); font-weight:600; font-size:clamp(34px,4.4vw,52px); letter-spacing:-0.01em; max-width:680px;}
+  .page-head h1 em{font-style:italic; color:var(--savanna); font-weight:500;}
+  .page-head p{margin-top:18px; max-width:600px; color:var(--gray); font-size:16px;}
+  @media (max-width:760px){.page-head{padding:50px 22px 30px;}}
+
+  .divider{height:1px; background:var(--line); max-width:1180px; margin:0 auto;}
+  section{padding:56px 48px; max-width:1180px; margin:0 auto;}
+  @media (max-width:760px){section{padding:40px 22px;}}
+  .section-head{margin-bottom:32px;}
+  .section-head h2{font-family:var(--serif); font-weight:600; font-size:clamp(22px,2.6vw,28px); letter-spacing:-0.01em;}
+
+  .talk-item{
+    display:grid; grid-template-columns:130px 1fr; gap:24px;
+    padding:24px; margin:0 -24px; border-bottom:1px solid var(--line);
+    border-radius:6px; transition:background .25s ease, transform .25s ease;
+  }
+  .talk-item:first-child{border-top:1px solid var(--line);}
+  .talk-item:hover{background:var(--paper-warm); transform:translateY(-2px);}
+  .talk-date{font-family:var(--mono); font-size:13px; color:var(--gray); padding-top:2px;}
+  .talk-item h3{font-family:var(--serif); font-size:18px; font-weight:600; margin-bottom:6px; line-height:1.4;}
+  .talk-item .venue{font-size:13.5px; color:var(--gray);}
+  .talk-item .venue strong{color:var(--savanna);}
+  @media (max-width:600px){.talk-item{grid-template-columns:1fr; gap:6px;}}
+
+  footer{padding:54px 48px; text-align:center;}
+  footer h2{font-family:var(--serif); font-weight:600; font-size:clamp(22px,2.8vw,28px); margin-bottom:18px;}
+  footer .contact-links{display:flex; gap:28px; justify-content:center; flex-wrap:wrap; font-size:14.5px; font-weight:600; margin-top:18px;}
+  footer .contact-links a{padding-bottom:3px; border-bottom:1.5px solid transparent; transition:border-color .2s;}
+  footer .contact-links a:hover{border-color:var(--sienna);}
+  footer .copyright{margin-top:32px; font-family:var(--mono); font-size:12px; color:var(--gray);}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-name">Jesugnon Koumagnon</div>
+  <div class="nav-links">
+    <a href="index.html">Home</a>
+    <a href="research.html">Research</a>
+    <a href="talks.html" class="active">Talks</a>
+    <a href="cv.html">CV</a>
+  </div>
+</nav>
+
+<div class="page-head">
+  <div class="eyebrow">Talks &amp; Seminars</div>
+  <h1>Presentations &amp; <em>academic activity.</em></h1>
+  <p>Research presented, and seminars and workshops attended, across African School of Economics, UNICEF, the IMF, and the World Bank.</p>
+</div>
+
+<div class="divider"></div>
+
+<section>
+  <div class="section-head">
+    <h2>Research Presented</h2>
+  </div>
+
+  <div class="talk-item">
+    <div class="talk-date">2024</div>
+    <div>
+      <h3>Boko Haram and Climate Change around Lake Chad</h3>
+      <div class="venue">Presented at <strong>African School of Economics</strong>, Abomey-Calavi</div>
+    </div>
+  </div>
+
+  <div class="talk-item">
+    <div class="talk-date">2025</div>
+    <div>
+      <h3>Development of a Web-Based Diagnostic Tool for Real-Time Classification of Colposcopy Images</h3>
+      <div class="venue">Central Hospital of Parakou — presented to research team and partners, <strong>African School of Economics</strong></div>
+    </div>
+  </div>
+
+</section>
+
+<div class="divider"></div>
+
+<section>
+  <div class="section-head">
+    <h2>Seminars &amp; Workshops Attended</h2>
+  </div>
+
+  <div class="talk-item">
+    <div class="talk-date">2024</div>
+    <div>
+      <h3>Workshop on Research Methods and Data Management</h3>
+      <div class="venue"><strong>African School of Economics</strong>, Abomey-Calavi</div>
+    </div>
+  </div>
+
+  <div class="talk-item">
+    <div class="talk-date">2024</div>
+    <div>
+      <h3>Seminar on Child Poverty and Policy Responses</h3>
+      <div class="venue"><strong>UNICEF Côte d'Ivoire</strong>, Abidjan</div>
+    </div>
+  </div>
+
+  <div class="talk-item">
+    <div class="talk-date">Jan 2024</div>
+    <div>
+      <h3>Evaluation of the Economic Situation in Benin</h3>
+      <div class="venue"><strong>International Monetary Fund (IMF)</strong></div>
+    </div>
+  </div>
+
+  <div class="talk-item">
+    <div class="talk-date">May 2023</div>
+    <div>
+      <h3>Workshop on Private Sector Evolution</h3>
+      <div class="venue">By Dr. Andrew Dabalen, Chief Economist of the Africa Region, <strong>World Bank</strong> — Main Lecture Hall, African School of Economics</div>
+    </div>
+  </div>
+
+</section>
+
+<div class="divider"></div>
+
+<footer>
+  <div class="eyebrow" style="justify-content:center;">Get in touch</div>
+  <h2>Open to research collaborations and data &amp; policy roles.</h2>
+  <div class="contact-links">
+    <a href="mailto:dkoumagnon@africanschoolofeconomics.com">Email</a>
+    <a href="https://www.linkedin.com/in/jesugnon" target="_blank" rel="noopener">LinkedIn</a>
+    <a href="https://github.com/JesugnonKoumagnon" target="_blank" rel="noopener">GitHub</a>
+    <a href="cv.html">CV</a>
+  </div>
+  <div class="copyright">© 2026 Jesugnon David Janvier Koumagnon · Nairobi, Kenya · Last updated June 2026</div>
+</footer>
+
+</body>
+</html>

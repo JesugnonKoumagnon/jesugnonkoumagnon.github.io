@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Project Notes: UNICEF Dashboard — Jesugnon Koumagnon</title>
+<link rel="icon" href="../../favicon.ico" sizes="any">
+<link rel="icon" type="image/png" href="../../favicon-32.png" sizes="32x32">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#1C1B19; --paper:#F7F3EC; --paper-warm:#F0EAE0;
+    --sienna:#C0532D; --savanna:#3D5A45; --gray:#8A8275; --line:rgba(28,27,25,0.14);
+    --serif:'Fraunces',serif; --sans:'Inter',sans-serif; --mono:'JetBrains Mono',monospace;
+  }
+  *{margin:0;padding:0;box-sizing:border-box;}
+  body{background:var(--paper); color:var(--ink); font-family:var(--sans); line-height:1.6; -webkit-font-smoothing:antialiased;}
+  a{color:inherit; text-decoration:none;}
+  @media (prefers-reduced-motion: reduce){*{animation-duration:0.01ms !important; transition-duration:0.01ms !important;}}
+
+  nav{position:sticky; top:0; z-index:50; display:flex; align-items:center; justify-content:space-between;
+    padding:22px 48px; background:rgba(247,243,236,0.88); backdrop-filter:blur(8px); border-bottom:1px solid var(--line);}
+  .nav-name{font-family:var(--serif); font-weight:600; font-size:18px;}
+  .nav-links{display:flex; gap:34px; font-size:14px; font-weight:500;}
+  .nav-links a{opacity:0.72; transition:opacity .2s;}
+  .nav-links a:hover{opacity:1;}
+  @media (max-width:560px){nav{padding:16px 20px;} .nav-links{gap:16px; font-size:12.5px;}}
+
+  .breadcrumb{max-width:760px; margin:0 auto; padding:32px 24px 0; font-family:var(--mono); font-size:12.5px; color:var(--gray);}
+  .breadcrumb a{color:var(--sienna); border-bottom:1px solid transparent; transition:border-color .2s;}
+  .breadcrumb a:hover{border-color:var(--sienna);}
+
+  article{max-width:760px; margin:0 auto; padding:24px 24px 80px;}
+  .doc-head{padding:24px 0 32px; border-bottom:2px solid var(--ink); margin-bottom:32px;}
+  .doc-head .tag{font-family:var(--mono); font-size:12px; color:var(--sienna); text-transform:uppercase; letter-spacing:0.05em; margin-bottom:10px; display:block;}
+  .doc-head h1{font-family:var(--serif); font-weight:600; font-size:clamp(28px,3.6vw,38px); letter-spacing:-0.01em; line-height:1.2;}
+  .doc-head .lede{margin-top:14px; font-size:16px; color:#4a4742; line-height:1.7;}
+  .doc-head .links{margin-top:18px; display:flex; gap:20px; font-size:13.5px; font-weight:600;}
+  .doc-head .links a{color:var(--sienna);}
+  .doc-head .links a:hover{text-decoration:underline;}
+
+  article h2{font-family:var(--serif); font-weight:600; font-size:22px; margin:38px 0 14px; letter-spacing:-0.01em;}
+  article h3{font-family:var(--mono); font-size:12.5px; text-transform:uppercase; letter-spacing:0.05em; color:var(--savanna); margin:26px 0 10px;}
+  article p{font-size:15px; color:#3a3733; line-height:1.75; margin-bottom:12px;}
+  article ul, article ol{padding-left:20px; margin-bottom:14px;}
+  article li{font-size:15px; color:#3a3733; line-height:1.7; padding:3px 0;}
+
+  .finding-box{background:var(--paper-warm); border-left:3px solid var(--sienna); padding:18px 22px; margin:20px 0; border-radius:0 4px 4px 0;}
+  .finding-box .label{font-family:var(--mono); font-size:11px; color:var(--sienna); text-transform:uppercase; letter-spacing:0.05em; display:block; margin-bottom:8px;}
+  .finding-box p{margin-bottom:0;}
+
+  table{width:100%; border-collapse:collapse; margin:18px 0; font-size:13.5px;}
+  thead th{background:var(--ink); color:var(--paper); font-family:var(--mono); font-size:11px; text-transform:uppercase; letter-spacing:0.04em; padding:10px 14px; text-align:left;}
+  tbody td{padding:10px 14px; border-bottom:1px solid var(--line); color:#3a3733;}
+  tbody tr:nth-child(even){background:var(--paper-warm);}
+  tbody td:first-child{font-weight:600;}
+
+  .pill-row{display:flex; gap:8px; flex-wrap:wrap; margin:18px 0;}
+  .pill{font-family:var(--mono); font-size:11px; color:var(--savanna); background:rgba(61,90,69,0.08); padding:4px 10px; border-radius:20px;}
+
+  .credit-note{font-size:13px; color:var(--gray); font-style:italic; margin-top:24px; padding-top:18px; border-top:1px solid var(--line); line-height:1.6;}
+
+  footer{padding:40px 48px; text-align:center; font-family:var(--mono); font-size:12px; color:var(--gray);}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-name">Jesugnon Koumagnon</div>
+  <div class="nav-links">
+    <a href="../../index.html">Home</a>
+    <a href="../../research.html">Research</a>
+    <a href="../../talks.html">Talks</a>
+    <a href="../../cv.html">CV</a>
+  </div>
+</nav>
+
+<div class="breadcrumb"><a href="../../research.html">← Back to Research</a></div>
+
+<article>
+  <div class="doc-head">
+    <span class="tag">Project Notes · Dashboard</span>
+    <h1>Multidimensional Child Poverty Dashboard — UNICEF Côte d'Ivoire</h1>
+    <p class="lede">An interactive R Shiny dashboard monitoring social indicators derived from multidimensional child poverty analysis, built during a Social Policy internship at UNICEF.</p>
+    <div class="links">
+      <a href="https://kjjesugnon.shinyapps.io/Indicators/" target="_blank" rel="noopener">Live dashboard ↗</a>
+    </div>
+  </div>
+
+  <h2>Context</h2>
+  <p>During a Social Policy internship at UNICEF Côte d'Ivoire (2024–2025), I analyzed multidimensional child poverty data and built tools to make the findings accessible to UNICEF teams and government partners.</p>
+
+  <h2>What this dashboard does</h2>
+  <ul>
+    <li>Tracks social indicators related to child deprivation (health, water, sanitation, education, housing)</li>
+    <li>Visualizes the geographic distribution of the Multidimensional Poverty Index (MPI) and changes in deprivation across regions</li>
+    <li>Designed for non-technical stakeholders (government officials, program teams) to explore the data without needing R or GIS software</li>
+  </ul>
+
+  <h2>Related work from this internship</h2>
+  <table>
+    <thead><tr><th>Output</th><th>Detail</th></tr></thead>
+    <tbody>
+      <tr><td>N-MODA report (3rd edition)</td><td>Led the underlying data analysis for Côte d'Ivoire's official child poverty report — published by the Ministry of Economy, Plan &amp; Development with UNICEF, validated Dec 2024</td></tr>
+      <tr><td>Policy brief</td><td>10+ recommendations for government social programs</td></tr>
+      <tr><td>MPI mapping</td><td>Distribution mapping across regions</td></tr>
+      <tr><td>Survey tools</td><td>Development and testing for poverty data collection</td></tr>
+    </tbody>
+  </table>
+
+  <div class="finding-box">
+    <span class="label">Note</span>
+    <p>The N-MODA report itself is a government/UNICEF publication, not republished here — household survey microdata (EDS 2021) underlying it is confidential. The dashboard above is built on de-identified, aggregated indicators only.</p>
+  </div>
+
+  <div class="pill-row">
+    <span class="pill">R Shiny</span><span class="pill">EDS Survey Data</span><span class="pill">MPI</span><span class="pill">Dashboard Design</span>
+  </div>
+
+  <p class="credit-note">Author: Jesugnon David Janvier Koumagnon · UNICEF Côte d'Ivoire, 2024–2025</p>
+</article>
+
+<footer>© 2026 Jesugnon David Janvier Koumagnon</footer>
+
+</body>
+</html>
