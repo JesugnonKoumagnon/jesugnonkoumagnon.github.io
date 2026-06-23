@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Research — Jesugnon Koumagnon</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#1C1B19; --paper:#F7F3EC; --paper-warm:#F0EAE0;
+    --sienna:#C0532D; --savanna:#3D5A45; --gray:#8A8275; --line:rgba(28,27,25,0.14);
+    --serif:'Fraunces',serif; --sans:'Inter',sans-serif; --mono:'JetBrains Mono',monospace;
+  }
+  *{margin:0;padding:0;box-sizing:border-box;}
+  body{background:var(--paper); color:var(--ink); font-family:var(--sans); line-height:1.6; -webkit-font-smoothing:antialiased;}
+  a{color:inherit; text-decoration:none;}
+  @media (prefers-reduced-motion: reduce){*{animation-duration:0.01ms !important; transition-duration:0.01ms !important;}}
+
+  nav{position:sticky; top:0; z-index:50; display:flex; align-items:center; justify-content:space-between;
+    padding:22px 48px; background:rgba(247,243,236,0.88); backdrop-filter:blur(8px); border-bottom:1px solid var(--line);}
+  .nav-name{font-family:var(--serif); font-weight:600; font-size:18px;}
+  .nav-links{display:flex; gap:34px; font-size:14px; font-weight:500;}
+  .nav-links a{position:relative; opacity:0.72; transition:opacity .2s;}
+  .nav-links a:hover{opacity:1;}
+  .nav-links a.active{opacity:1;}
+  .nav-links a.active::after{content:''; position:absolute; left:0; right:0; bottom:-6px; height:2px; background:var(--sienna);}
+  @media (max-width:760px){nav{padding:18px 22px;} .nav-links{gap:18px; font-size:12.5px;}}
+
+  .page-head{padding:70px 48px 40px; max-width:1180px; margin:0 auto;}
+  .eyebrow{font-family:var(--mono); font-size:12.5px; letter-spacing:0.08em; color:var(--sienna); text-transform:uppercase; margin-bottom:16px; display:flex; align-items:center; gap:10px;}
+  .eyebrow::before{content:''; width:18px; height:1px; background:var(--sienna);}
+  .page-head h1{font-family:var(--serif); font-weight:600; font-size:clamp(34px,4.4vw,52px); letter-spacing:-0.01em; max-width:680px;}
+  .page-head h1 em{font-style:italic; color:var(--savanna); font-weight:500;}
+  .page-head p{margin-top:18px; max-width:600px; color:var(--gray); font-size:16px;}
+  @media (max-width:760px){.page-head{padding:50px 22px 30px;}}
+
+  .divider{height:1px; background:var(--line); max-width:1180px; margin:0 auto;}
+
+  .paper{padding:64px 48px; max-width:1180px; margin:0 auto; display:grid; grid-template-columns:200px 1fr; gap:48px;}
+  .paper-meta{font-family:var(--mono); font-size:12.5px; color:var(--gray); line-height:2;}
+  .paper-meta .year{color:var(--ink); font-weight:600; font-size:14px; display:block; margin-bottom:6px;}
+  .paper-meta .status{display:inline-block; margin-top:10px; padding:3px 9px; border:1px solid var(--line); border-radius:20px; font-size:10.5px; letter-spacing:0.03em;}
+  .paper h2{font-family:var(--serif); font-weight:600; font-size:clamp(24px,2.6vw,30px); margin-bottom:16px; letter-spacing:-0.01em;}
+  .paper .lede{font-size:15.5px; color:#4a4742; line-height:1.75; margin-bottom:20px;}
+  .paper .finding{
+    background:var(--paper-warm); border-left:3px solid var(--sienna); padding:16px 20px; margin-bottom:22px;
+    font-size:14.5px; line-height:1.7;
+  }
+  .paper .finding strong{color:var(--sienna); font-family:var(--mono); font-size:11.5px; letter-spacing:0.04em; text-transform:uppercase; display:block; margin-bottom:6px;}
+  .paper h4{font-family:var(--mono); font-size:11.5px; letter-spacing:0.05em; text-transform:uppercase; color:var(--savanna); margin:22px 0 10px;}
+  .paper ul{padding-left:18px; margin-bottom:6px;}
+  .paper li{font-size:14.5px; color:#4a4742; padding:4px 0; line-height:1.6;}
+  .pill-row{display:flex; gap:8px; flex-wrap:wrap; margin-top:18px;}
+  .pill{font-family:var(--mono); font-size:11px; color:var(--savanna); background:rgba(61,90,69,0.08); padding:4px 10px; border-radius:20px;}
+  .paper-links{margin-top:22px; display:flex; gap:20px; flex-wrap:wrap; font-size:13.5px; font-weight:600;}
+  .paper-links a{color:var(--sienna); border-bottom:1.5px solid transparent; padding-bottom:2px; transition:border-color .2s;}
+  .paper-links a:hover{border-color:var(--sienna);}
+  .credit-note{font-size:13px; color:var(--gray); font-style:italic; margin-top:18px; line-height:1.6;}
+
+  @media (max-width:760px){
+    .paper{grid-template-columns:1fr; padding:44px 22px; gap:18px;}
+  }
+
+  .data-glossary{padding:64px 48px; max-width:1180px; margin:0 auto;}
+  .glossary-grid{display:grid; grid-template-columns:repeat(2,1fr); gap:1px; background:var(--line); border:1px solid var(--line); margin-top:32px;}
+  .glossary-card{background:var(--paper); padding:24px;}
+  .glossary-card .term{font-family:var(--mono); font-weight:600; font-size:13.5px; color:var(--sienna); margin-bottom:8px;}
+  .glossary-card p{font-size:13.5px; color:var(--gray); line-height:1.6;}
+  @media (max-width:760px){.glossary-grid{grid-template-columns:1fr;}}
+
+  footer{padding:54px 48px; text-align:center;}
+  footer .contact-links{display:flex; gap:28px; justify-content:center; flex-wrap:wrap; font-size:14.5px; font-weight:600; margin-top:18px;}
+  footer .contact-links a{padding-bottom:3px; border-bottom:1.5px solid transparent; transition:border-color .2s;}
+  footer .contact-links a:hover{border-color:var(--sienna);}
+  footer .copyright{margin-top:32px; font-family:var(--mono); font-size:12px; color:var(--gray);}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-name">Jesugnon Koumagnon</div>
+  <div class="nav-links">
+    <a href="index.html">Home</a>
+    <a href="research.html" class="active">Research</a>
+    <a href="cv.html">CV</a>
+  </div>
+</nav>
+
+<div class="page-head">
+  <div class="eyebrow">Scholarship</div>
+  <h1>Research &amp; <em>working papers.</em></h1>
+  <p>Applied empirical work on climate, conflict, and social protection — combining econometrics, GIS, and survey data across Sub-Saharan Africa.</p>
+</div>
+
+<div class="divider"></div>
+
+<article class="paper" id="impact">
+  <div class="paper-meta">
+    <span class="year">2026 —</span>
+    Port Sudan<br>Impact Initiatives
+    <span class="status">Current Role</span>
+  </div>
+  <div>
+    <h2>Data Officer — Research Cycle Management</h2>
+    <p class="lede">Supporting large-scale humanitarian needs assessments, including the Multi-Sector Needs Assessment (MSNA) and Joint Market Monitoring Initiative (JMMI), from sampling design through to information products for response teams.</p>
+    <h4>Responsibilities</h4>
+    <ul>
+      <li>Building sampling strategies in collaboration with assessment and GIS teams</li>
+      <li>Setting up and maintaining R-based data analysis workflows</li>
+      <li>Training enumerators and field staff on data cleaning and quality practices</li>
+      <li>Designing dashboards and information products for assessment teams and partners</li>
+    </ul>
+    <div class="pill-row">
+      <span class="pill">R</span><span class="pill">Survey Design</span><span class="pill">GIS</span><span class="pill">Data Quality</span><span class="pill">Dashboard Design</span>
+    </div>
+    <p class="credit-note">Project content and findings are part of an active humanitarian operation and are not detailed here out of respect for data sensitivity and organizational policy. This entry describes role and methods only.</p>
+  </div>
+</article>
+
+<div class="divider"></div>
+
+<article class="paper" id="lakechad">
+  <div class="paper-meta">
+    <span class="year">2024</span>
+    Lake Chad Basin<br>Cameroon · Chad · Niger · Nigeria
+    <span class="status">Working Paper</span>
+  </div>
+  <div>
+    <h2>Boko Haram Violence and Climate Change in the Lake Chad Region</h2>
+    <p class="lede">A district- and grid-cell-level panel study (2009–2022) testing whether climate anomalies — temperature, rainfall, vegetation, and drought — have a measurable relationship with the intensity and spread of Boko Haram violence.</p>
+    <div class="finding">
+      <strong>Key finding</strong>
+      Warmer-than-average temperatures and drought conditions (low SPEI) are associated with significantly higher conflict intensity at the district level, while higher rainfall is associated with less conflict. Violence also shows strong spatial spillover — conflict in neighboring districts is one of the strongest predictors of local conflict.
+    </div>
+    <h4>Method</h4>
+    <ul>
+      <li>92 districts + grid cells (~10km²) across the Lake Chad basin, 2009–2022</li>
+      <li>Conflict data from ACLED; climate data from MODIS (NDVI, temperature) and CHIRPS (rainfall)</li>
+      <li>Fixed-effects panel regression with annual climate anomalies (z-scores) and a spatially lagged conflict term</li>
+      <li>Controls: population (WorldPop), travel time to cities (Malaria Atlas Project), night-time lights, cropland share</li>
+      <li>Addressed reverse causality (lagged variables), omitted variable bias (control set), and spatial autocorrelation (spatial FE + lag)</li>
+    </ul>
+    <div class="pill-row">
+      <span class="pill">R</span><span class="pill">ACLED</span><span class="pill">MODIS</span><span class="pill">CHIRPS</span>
+      <span class="pill">Panel Fixed Effects</span><span class="pill">Spatial Lag</span>
+    </div>
+    <div class="paper-links">
+      <a href="boko-haram-climate-lakechad.html">Read full summary ↗</a>
+      <a href="https://github.com/" target="_blank" rel="noopener">View code (GitHub) ↗</a>
+    </div>
+  </div>
+</article>
+
+<div class="divider"></div>
+
+<article class="paper" id="nigeria">
+  <div class="paper-meta">
+    <span class="year">2024</span>
+    Nigeria<br>37 States, 6 Geopolitical Zones
+    <span class="status">Policy Brief</span>
+  </div>
+  <div>
+    <h2>Multidimensional Poverty and Social Protection Assistance in Nigeria</h2>
+    <p class="lede">A state-level diagnostic asking whether Nigeria's three major social assistance programs (P-CGS, VGF, CCT) reach the households who need them most.</p>
+    <div class="finding">
+      <strong>Key finding</strong>
+      They largely don't. States with the highest poverty (MPI above 80% — Sokoto, Bayelsa, Gombe, Jigawa, Plateau) receive the lowest program coverage, while some moderate-poverty states show National Social Register enrolment exceeding 100% of their poor population — a sign of likely misclassification. 47.4% of Nigeria's poor are not registered at all.
+    </div>
+    <h4>Method</h4>
+    <ul>
+      <li>Merged NBS state-level Multidimensional Poverty Index data with National Social Register and program beneficiary figures</li>
+      <li>Built a choropleth map of poverty incidence across all 37 states</li>
+      <li>Computed coverage gaps (poor population vs. registered population) by state and geopolitical zone</li>
+      <li>Cross-tabulated program reach (P-CGS, VGF, CCT) against poverty severity to surface targeting mismatches</li>
+    </ul>
+    <div class="pill-row">
+      <span class="pill">R</span><span class="pill">QGIS</span><span class="pill">NBS MPI Data</span><span class="pill">Choropleth Mapping</span>
+    </div>
+    <div class="paper-links">
+      <a href="nigeria-mpi-social-protection.html">Read full brief ↗</a>
+      <a href="https://github.com/" target="_blank" rel="noopener">View code (GitHub) ↗</a>
+    </div>
+  </div>
+</article>
+
+<div class="divider"></div>
+
+<article class="paper" id="unicef">
+  <div class="paper-meta">
+    <span class="year">2024–2025</span>
+    Côte d'Ivoire<br>UNICEF / Ministry of Economy, Plan &amp; Development
+    <span class="status">Government Report</span>
+  </div>
+  <div>
+    <h2>N-MODA: National Multiple Overlapping Deprivation Analysis on Child Poverty</h2>
+    <p class="lede">As a Social Policy Intern at UNICEF Côte d'Ivoire, I led the data analysis underlying the 3rd edition of the country's official child poverty report — based on EDS 2021 survey data, covering 5,000+ households.</p>
+    <div class="finding">
+      <strong>Key finding</strong>
+      Multidimensional child poverty in Côte d'Ivoire shows strong regional concentration in the North, North-East, and West — the same regions where climate vulnerability indices are highest — pointing to compounding deprivation that monetary poverty measures alone miss.
+    </div>
+    <h4>Contribution</h4>
+    <ul>
+      <li>Analyzed multidimensional deprivation data across health, water, sanitation, education, and housing for 5,000+ households</li>
+      <li>Mapped MPI distribution and changes in deprivation across districts</li>
+      <li>Produced a policy brief with 10+ recommendations for government social programs</li>
+      <li>Built an interactive R Shiny dashboard tracking 20+ social indicators for UNICEF teams</li>
+    </ul>
+    <div class="pill-row">
+      <span class="pill">R Shiny</span><span class="pill">EDS Survey Data</span><span class="pill">MPI</span><span class="pill">Dashboard Design</span>
+    </div>
+    <div class="paper-links">
+      <a href="https://kjjesugnon.shinyapps.io/Indicators/" target="_blank" rel="noopener">Live dashboard ↗</a>
+    </div>
+    <p class="credit-note">The N-MODA report is an official publication of Côte d'Ivoire's Ministry of Economy, Plan and Development (Office National de la Population) in collaboration with UNICEF, validated December 2024. It is linked here as a credit to my contribution, not republished — underlying EDS 2021 microdata is confidential.</p>
+  </div>
+</article>
+
+<div class="divider"></div>
+
+<section class="data-glossary">
+  <div class="eyebrow">Data sources</div>
+  <h2 style="font-family:var(--serif); font-weight:600; font-size:clamp(26px,3vw,32px); max-width:600px;">Key datasets, <em style="font-style:italic; color:var(--savanna); font-weight:500;">explained.</em></h2>
+  <div class="glossary-grid">
+    <div class="glossary-card">
+      <div class="term">ACLED</div>
+      <p>Armed Conflict Location &amp; Event Data — globally tracked political violence and protest events, geo-coded at the incident level.</p>
+    </div>
+    <div class="glossary-card">
+      <div class="term">MODIS</div>
+      <p>NASA's Moderate Resolution Imaging Spectroradiometer — satellite-derived vegetation (NDVI) and temperature data at ~5km resolution.</p>
+    </div>
+    <div class="glossary-card">
+      <div class="term">CHIRPS</div>
+      <p>Climate Hazards Group InfraRed Precipitation with Station data — high-resolution monthly rainfall estimates used to detect drought.</p>
+    </div>
+    <div class="glossary-card">
+      <div class="term">SPEI</div>
+      <p>Standardized Precipitation-Evapotranspiration Index — a drought severity measure combining rainfall and temperature across time scales.</p>
+    </div>
+    <div class="glossary-card">
+      <div class="term">MPI</div>
+      <p>Multidimensional Poverty Index — measures deprivation across health, education, and living standards, complementing income-based poverty.</p>
+    </div>
+    <div class="glossary-card">
+      <div class="term">WorldPop</div>
+      <p>Gridded population estimates at ~100m resolution, used here to control for population density in conflict and poverty models.</p>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<footer>
+  <div class="eyebrow" style="justify-content:center;">Get in touch</div>
+  <h2 style="font-family:var(--serif); font-weight:600; font-size:clamp(22px,2.8vw,28px);">Open to research collaborations and data &amp; policy roles.</h2>
+  <div class="contact-links">
+    <a href="mailto:dkoumagnon@africanschoolofeconomics.com">Email</a>
+    <a href="https://www.linkedin.com/in/jesugnon" target="_blank" rel="noopener">LinkedIn</a>
+    <a href="https://github.com/" target="_blank" rel="noopener">GitHub</a>
+    <a href="https://scholar.google.com/" target="_blank" rel="noopener">Google Scholar</a>
+    <a href="cv.html">CV</a>
+  </div>
+  <div class="copyright">© 2026 Jesugnon David Janvier Koumagnon · Nairobi, Kenya</div>
+</footer>
+
+</body>
+</html>

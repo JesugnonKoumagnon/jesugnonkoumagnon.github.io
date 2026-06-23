@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Jesugnon Koumagnon — Researcher, Climate & Social Policy</title>
+<meta name="description" content="Jesugnon David Janvier Koumagnon — Researcher and Data Analyst working on climate resilience, social protection, and development policy in Africa.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#1C1B19;
+    --paper:#F7F3EC;
+    --paper-warm:#F0EAE0;
+    --sienna:#C0532D;
+    --savanna:#3D5A45;
+    --gray:#8A8275;
+    --line: rgba(28,27,25,0.14);
+    --serif: 'Fraunces', serif;
+    --sans: 'Inter', sans-serif;
+    --mono: 'JetBrains Mono', monospace;
+  }
+  *{margin:0;padding:0;box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    background:var(--paper);
+    color:var(--ink);
+    font-family:var(--sans);
+    line-height:1.6;
+    -webkit-font-smoothing:antialiased;
+  }
+  a{color:inherit;text-decoration:none;}
+  @media (prefers-reduced-motion: reduce){
+    *{animation-duration:0.01ms !important; transition-duration:0.01ms !important;}
+  }
+
+  /* ===== Nav ===== */
+  nav{
+    position:sticky; top:0; z-index:50;
+    display:flex; align-items:center; justify-content:space-between;
+    padding:22px 48px;
+    background:rgba(247,243,236,0.88);
+    backdrop-filter:blur(8px);
+    border-bottom:1px solid var(--line);
+  }
+  .nav-name{font-family:var(--serif); font-weight:600; font-size:18px; letter-spacing:0.01em;}
+  .nav-links{display:flex; gap:34px; font-size:14px; font-weight:500;}
+  .nav-links a{position:relative; color:var(--ink); opacity:0.72; transition:opacity .2s;}
+  .nav-links a:hover{opacity:1;}
+  .nav-links a.active{opacity:1;}
+  .nav-links a.active::after{
+    content:''; position:absolute; left:0; right:0; bottom:-6px; height:2px; background:var(--sienna);
+  }
+  @media (max-width:560px){
+    nav{padding:16px 20px;}
+    .nav-links{gap:16px; font-size:12.5px;}
+    .nav-name{font-size:16px;}
+  }
+
+  /* ===== Hero ===== */
+  .hero{
+    position:relative;
+    padding:100px 48px 80px;
+    max-width:1180px; margin:0 auto;
+    display:grid; grid-template-columns:1.1fr 0.9fr; gap:56px; align-items:center;
+  }
+  .eyebrow{
+    font-family:var(--mono); font-size:12.5px; letter-spacing:0.08em; color:var(--sienna);
+    text-transform:uppercase; margin-bottom:18px; display:flex; align-items:center; gap:10px;
+  }
+  .eyebrow::before{content:'';width:18px;height:1px;background:var(--sienna);}
+  .hero h1{
+    font-family:var(--serif); font-weight:600; font-size:clamp(40px,5.2vw,64px);
+    line-height:1.04; letter-spacing:-0.01em; margin-bottom:22px;
+  }
+  .hero h1 em{font-style:italic; font-weight:500; color:var(--savanna);}
+  .hero p.role{
+    font-size:18px; color:var(--gray); max-width:480px; margin-bottom:30px; line-height:1.65;
+  }
+  .hero-cta{display:flex; gap:14px; flex-wrap:wrap;}
+  .btn{
+    font-family:var(--sans); font-weight:600; font-size:14.5px;
+    padding:13px 26px; border-radius:3px; display:inline-flex; align-items:center; gap:8px;
+    transition:transform .2s, box-shadow .2s;
+  }
+  .btn-primary{background:var(--ink); color:var(--paper);}
+  .btn-primary:hover{transform:translateY(-2px); box-shadow:0 6px 18px rgba(28,27,25,0.22);}
+  .btn-ghost{border:1px solid var(--line); color:var(--ink);}
+  .btn-ghost:hover{border-color:var(--ink); transform:translateY(-2px);}
+
+  /* Signature map graphic */
+  .map-wrap{position:relative; display:flex; justify-content:center;}
+  .map-card{
+    background:var(--paper-warm); border:1px solid var(--line); border-radius:6px;
+    padding:28px; width:100%; max-width:380px;
+  }
+  .map-card svg{width:100%; height:auto; display:block;}
+  .map-caption{
+    font-family:var(--mono); font-size:11px; color:var(--gray); margin-top:14px;
+    display:flex; justify-content:space-between; letter-spacing:0.02em;
+  }
+  .coord-dot{
+    fill:var(--sienna);
+    animation:pulse 2.6s ease-in-out infinite;
+  }
+  @keyframes pulse{
+    0%,100%{opacity:1; r:3.4;} 50%{opacity:0.35; r:5.2;}
+  }
+
+  @media (max-width:900px){
+    .hero{grid-template-columns:1fr; padding:64px 24px 50px;}
+    .map-wrap{order:-1;}
+  }
+
+  /* ===== About section ===== */
+  .about-section{padding:70px 48px; max-width:1180px; margin:0 auto;}
+  .about-grid{display:grid; grid-template-columns:240px 1fr; gap:56px; align-items:start;}
+  .photo-frame{
+    width:100%; aspect-ratio:4/5; border-radius:6px; overflow:hidden;
+    background:var(--paper-warm); border:1px solid var(--line);
+    display:flex; align-items:center; justify-content:center;
+  }
+  .photo-frame img{width:100%; height:100%; object-fit:cover; display:block;}
+  .photo-placeholder{font-family:var(--mono); font-size:12px; color:var(--gray); letter-spacing:0.04em;}
+  .about-text{font-size:15.5px; color:#4a4742; line-height:1.8; margin-bottom:16px; max-width:620px;}
+  @media (max-width:760px){
+    .about-section{padding:50px 22px;}
+    .about-grid{grid-template-columns:1fr; gap:28px;}
+    .photo-frame{max-width:220px; margin:0 auto;}
+  }
+
+  /* ===== Section shared ===== */
+  section{padding:70px 48px; max-width:1180px; margin:0 auto;}
+  @media (max-width:760px){section{padding:54px 22px;}}
+  .section-head{margin-bottom:44px; max-width:640px;}
+  .section-head .eyebrow{margin-bottom:14px;}
+  .section-head h2{font-family:var(--serif); font-weight:600; font-size:clamp(28px,3.4vw,38px); letter-spacing:-0.01em;}
+  .section-head h2 em{font-style:italic; color:var(--savanna); font-weight:500;}
+  .divider{height:1px; background:var(--line); max-width:1180px; margin:0 auto;}
+
+  /* ===== Focus cards ===== */
+  .focus-grid{display:grid; grid-template-columns:repeat(2,1fr); gap:1px; background:var(--line); border:1px solid var(--line);}
+  .focus-card{background:var(--paper); padding:34px;}
+  .focus-card .tag{
+    font-family:var(--mono); font-size:11.5px; color:var(--sienna); letter-spacing:0.05em; text-transform:uppercase;
+  }
+  .focus-card h3{font-family:var(--serif); font-size:21px; font-weight:600; margin:12px 0 10px;}
+  .focus-card p{font-size:14.5px; color:var(--gray); line-height:1.65;}
+  @media (max-width:760px){.focus-grid{grid-template-columns:1fr;}}
+
+  /* ===== Project rows ===== */
+  .project-row{
+    display:grid; grid-template-columns:90px 1fr; gap:28px;
+    padding:32px 0; border-bottom:1px solid var(--line);
+  }
+  .project-row:first-child{border-top:1px solid var(--line);}
+  .project-row .pdate{font-family:var(--mono); font-size:13px; color:var(--gray); padding-top:4px;}
+  .project-row h3{font-family:var(--serif); font-size:22px; font-weight:600; margin-bottom:10px;}
+  .project-row h3 a{border-bottom:1.5px solid transparent; transition:border-color .2s;}
+  .project-row h3 a:hover{border-color:var(--sienna);}
+  .project-row p{font-size:15px; color:#4a4742; max-width:760px; margin-bottom:14px; line-height:1.7;}
+  .pill-row{display:flex; gap:8px; flex-wrap:wrap;}
+  .pill{
+    font-family:var(--mono); font-size:11px; color:var(--savanna); background:rgba(61,90,69,0.08);
+    padding:4px 10px; border-radius:20px; letter-spacing:0.02em;
+  }
+  .row-links{margin-top:14px; display:flex; gap:18px; font-size:13.5px; font-weight:600;}
+  .row-links a{color:var(--sienna);}
+  .row-links a:hover{text-decoration:underline;}
+  @media (max-width:600px){
+    .project-row{grid-template-columns:1fr; gap:8px;}
+  }
+
+  /* ===== Skills strip ===== */
+  .skills-strip{background:var(--ink); color:var(--paper);}
+  .skills-strip .section-head h2{color:var(--paper);}
+  .skills-strip .eyebrow{color:#E8A688;}
+  .skill-cols{display:grid; grid-template-columns:repeat(3,1fr); gap:40px;}
+  .skill-cols h4{font-family:var(--mono); font-size:12px; letter-spacing:0.06em; text-transform:uppercase; color:#E8A688; margin-bottom:16px;}
+  .skill-cols ul{list-style:none;}
+  .skill-cols li{font-size:14.5px; padding:7px 0; border-bottom:1px solid rgba(247,243,236,0.1); color:#E2DDD2;}
+  @media (max-width:760px){.skill-cols{grid-template-columns:1fr; gap:28px;}}
+
+  /* ===== Footer ===== */
+  footer{padding:54px 48px; text-align:center;}
+  footer .eyebrow{justify-content:center;}
+  footer .eyebrow::before{display:none;}
+  footer h2{font-family:var(--serif); font-size:clamp(24px,3vw,32px); font-weight:600; margin-bottom:18px;}
+  footer .contact-links{display:flex; gap:28px; justify-content:center; flex-wrap:wrap; font-size:14.5px; font-weight:600; margin-top:8px;}
+  footer .contact-links a{padding-bottom:3px; border-bottom:1.5px solid transparent; transition:border-color .2s;}
+  footer .contact-links a:hover{border-color:var(--sienna);}
+  footer .copyright{margin-top:40px; font-family:var(--mono); font-size:12px; color:var(--gray);}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-name">Jesugnon Koumagnon</div>
+  <div class="nav-links">
+    <a href="index.html" class="active">Home</a>
+    <a href="research.html">Research</a>
+    <a href="cv.html">CV</a>
+  </div>
+</nav>
+
+<section class="hero">
+  <div>
+    <div class="eyebrow">Researcher &amp; Data Analyst</div>
+    <h1>Climate, conflict &amp; <em>social protection</em> in Africa.</h1>
+    <p class="role">I study how climate shocks and weak social protection systems interact with poverty and instability — using econometrics, GIS, and survey data across Benin, Côte d'Ivoire, Nigeria, and the Lake Chad basin.</p>
+    <div class="hero-cta">
+      <a href="research.html" class="btn btn-primary">View Research →</a>
+      <a href="cv.html" class="btn btn-ghost">Download CV</a>
+    </div>
+  </div>
+  <div class="map-wrap">
+    <div class="map-card">
+      <svg viewBox="0 0 320 280" xmlns="http://www.w3.org/2000/svg">
+        <!-- simplified Lake Chad basin region motif -->
+        <path d="M40 230 L55 190 L48 150 L70 120 L90 95 L130 70 L170 65 L210 80 L240 110 L255 150 L250 195 L225 225 L180 245 L120 250 L75 245 Z"
+              fill="none" stroke="#8A8275" stroke-width="1" stroke-dasharray="3 4" opacity="0.55"/>
+        <!-- lake shape -->
+        <path d="M150 120 Q165 110 180 118 Q195 128 188 145 Q180 160 162 158 Q145 156 142 140 Q140 128 150 120 Z"
+              fill="#3D5A45" opacity="0.65"/>
+        <!-- conflict points -->
+        <circle cx="160" cy="135" r="3.4" class="coord-dot"/>
+        <circle cx="178" cy="150" r="2" fill="#C0532D" opacity="0.7"/>
+        <circle cx="140" cy="118" r="2" fill="#C0532D" opacity="0.5"/>
+        <circle cx="172" cy="115" r="1.6" fill="#C0532D" opacity="0.6"/>
+        <circle cx="190" cy="138" r="1.6" fill="#C0532D" opacity="0.5"/>
+        <!-- country borders, light -->
+        <line x1="40" y1="230" x2="250" y2="195" stroke="#1C1B19" stroke-width="0.6" opacity="0.18"/>
+        <line x1="130" y1="70" x2="120" y2="250" stroke="#1C1B19" stroke-width="0.6" opacity="0.18"/>
+      </svg>
+      <div class="map-caption">
+        <span>13.1°N, 14.4°E</span>
+        <span>LAKE CHAD BASIN</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<section class="about-section">
+  <div class="about-grid">
+    <div class="about-photo">
+      <div class="photo-frame">
+        <span class="photo-placeholder">Photo</span>
+      </div>
+    </div>
+    <div>
+      <div class="eyebrow">About</div>
+      <h2 style="font-family:var(--serif); font-weight:600; font-size:clamp(26px,3.2vw,34px); letter-spacing:-0.01em; margin-bottom:18px;">Why this work.</h2>
+      <p class="about-text">I grew up in Benin, in a region where a bad rainy season was never just weather — it decided whether a harvest failed, whether a clinic had patients it couldn't treat, whether a family stayed put or moved on. That link between environmental shock and human vulnerability is what pulled me into statistics, and later into economics: not as an abstraction, but as a way to actually measure who gets left behind, and why.</p>
+      <p class="about-text">My work since has carried that thread across borders — household surveys in Benin, child poverty data in Côte d'Ivoire, conflict and climate data around Lake Chad, and now humanitarian assessments in Sudan. What ties it together is a belief that good evidence, built carefully and communicated clearly, can change what governments and agencies choose to do next.</p>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<section>
+  <div class="section-head">
+    <div class="eyebrow">Areas of inquiry</div>
+    <h2>Three questions I keep <em>returning to.</em></h2>
+  </div>
+  <div class="focus-grid">
+    <div class="focus-card">
+      <div class="tag">Climate &amp; Conflict</div>
+      <h3>Does a drying climate fuel violence?</h3>
+      <p>Panel econometrics linking temperature, rainfall, and vegetation anomalies to conflict intensity — tested at district and grid-cell level across the Lake Chad basin (Cameroon, Chad, Niger, Nigeria).</p>
+    </div>
+    <div class="focus-card">
+      <div class="tag">Social Protection</div>
+      <h3>Who do safety-net programs actually reach?</h3>
+      <p>Mapping the gap between where poverty is worst and where social assistance is delivered — using Multidimensional Poverty Index and national social register data.</p>
+    </div>
+    <div class="focus-card">
+      <div class="tag">Child Poverty</div>
+      <h3>How do we make deprivation visible to policymakers?</h3>
+      <p>Survey analysis and interactive dashboards translating household-level deprivation data into tools governments and UN agencies can act on.</p>
+    </div>
+    <div class="focus-card">
+      <div class="tag">Methods</div>
+      <h3>Causal inference under messy, real-world data.</h3>
+      <p>Fixed-effects panels, spatial lag models, RCT design, GIS aggregation, and machine learning applied to survey and satellite data across multi-country settings.</p>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<section>
+  <div class="section-head">
+    <div class="eyebrow">Selected work</div>
+    <h2>Recent <em>projects.</em></h2>
+  </div>
+
+  <div class="project-row">
+    <div class="pdate">2026 —</div>
+    <div>
+      <h3><a href="research.html#impact">Data Officer, Impact Initiatives — Sudan</a></h3>
+      <p>Supporting research cycle management for large-scale humanitarian needs assessments (MSNA, JMMI) — sampling design, R-based data pipelines, enumerator training, and information products for assessment teams in Port Sudan.</p>
+      <div class="pill-row"><span class="pill">R</span><span class="pill">Survey Design</span><span class="pill">GIS</span><span class="pill">Data Quality</span></div>
+      <div class="row-links"><a href="research.html#impact">Read more ↗</a></div>
+    </div>
+  </div>
+
+  <div class="project-row">
+    <div class="pdate">2024</div>
+    <div>
+      <h3><a href="research.html#lakechad">Boko Haram Violence &amp; Climate Change in the Lake Chad Region</a></h3>
+      <p>District- and cell-level fixed-effects panel models (2009–2022) testing whether temperature, rainfall, and drought anomalies predict Boko Haram conflict intensity, with spatial-lag terms capturing spillover across borders.</p>
+      <div class="pill-row"><span class="pill">R</span><span class="pill">ACLED</span><span class="pill">MODIS / CHIRPS</span><span class="pill">Panel FE</span><span class="pill">Spatial Lag</span></div>
+      <div class="row-links"><a href="https://github.com/Honaminto" target="_blank" rel="noopener">View paper ↗</a></div>
+    </div>
+  </div>
+
+  <div class="project-row">
+    <div class="pdate">2024</div>
+    <div>
+      <h3><a href="research.html#nigeria">Multidimensional Poverty &amp; Social Protection in Nigeria</a></h3>
+      <p>State-level analysis showing that Nigeria's highest-poverty states receive the lowest social assistance coverage — a targeting mismatch visible across 37 states and 3 national programs.</p>
+      <div class="pill-row"><span class="pill">R</span><span class="pill">QGIS</span><span class="pill">NBS MPI Data</span><span class="pill">Policy Brief</span></div>
+      <div class="row-links"><a href="research.html#nigeria">Read brief ↗</a></div>
+    </div>
+  </div>
+
+  <div class="project-row">
+    <div class="pdate">2024 – 2025</div>
+    <div>
+      <h3><a href="research.html#unicef">N-MODA: Child Poverty Analysis, Côte d'Ivoire</a></h3>
+      <p>Led the underlying data analysis for Côte d'Ivoire's official National Multiple Overlapping Deprivation Analysis — published by the Ministry of Economy, Plan &amp; Development with UNICEF. Also built an interactive dashboard monitoring 20+ child welfare indicators.</p>
+      <div class="pill-row"><span class="pill">R Shiny</span><span class="pill">Survey Data</span><span class="pill">UNICEF</span><span class="pill">Government Report</span></div>
+      <div class="row-links"><a href="https://kjjesugnon.shinyapps.io/Indicators/" target="_blank" rel="noopener">Live dashboard ↗</a></div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<section class="skills-strip">
+  <div class="section-head">
+    <div class="eyebrow">Toolkit</div>
+    <h2>Methods &amp; <em>data.</em></h2>
+  </div>
+  <div class="skill-cols">
+    <div>
+      <h4>Econometric Methods</h4>
+      <ul>
+        <li>Panel Fixed Effects</li>
+        <li>Spatial Lag / Spatial Autocorrelation</li>
+        <li>Causal Inference &amp; RCT Design</li>
+        <li>Impact Evaluation</li>
+      </ul>
+    </div>
+    <div>
+      <h4>Geospatial &amp; ML</h4>
+      <ul>
+        <li>GIS Mapping (QGIS)</li>
+        <li>Satellite Data (MODIS, CHIRPS)</li>
+        <li>Machine &amp; Deep Learning</li>
+        <li>Statistical Modelling</li>
+      </ul>
+    </div>
+    <div>
+      <h4>Tools &amp; Languages</h4>
+      <ul>
+        <li>R · Stata · Python · SQL</li>
+        <li>Power BI · R Shiny</li>
+        <li>Kobocollect · CsPro · ODK</li>
+        <li>LaTeX</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<footer>
+  <div class="eyebrow">Get in touch</div>
+  <h2>Open to research collaborations<br>and data &amp; policy analysis roles.</h2>
+  <div class="contact-links">
+    <a href="mailto:dkoumagnon@africanschoolofeconomics.com">Email</a>
+    <a href="https://www.linkedin.com/in/jesugnon" target="_blank" rel="noopener">LinkedIn</a>
+    <a href="https://github.com/" target="_blank" rel="noopener">GitHub</a>
+    <a href="https://scholar.google.com/" target="_blank" rel="noopener">Google Scholar</a>
+    <a href="cv.html">CV</a>
+  </div>
+  <div class="copyright">© 2026 Jesugnon David Janvier Koumagnon · Nairobi, Kenya</div>
+</footer>
+
+</body>
+</html>
