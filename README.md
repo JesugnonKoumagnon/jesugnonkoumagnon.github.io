@@ -6,3 +6,4 @@ Personal site and research portfolio for Jesugnon David Janvier Koumagnon — re
 
 ## Contact
 dkoumagnon@africanschoolofeconomics.com · [LinkedIn](https://www.linkedin.com/in/jesugnon)
+
