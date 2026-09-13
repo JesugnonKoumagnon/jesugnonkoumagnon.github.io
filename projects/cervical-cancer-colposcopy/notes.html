@@ -3,15 +3,15 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Project Notes: Cervical Cancer Screening — Jesugnon Koumagnon</title>
+<title>Project Notes: Cervical Cancer Screening - Jesugnon Koumagnon</title>
 <link rel="icon" href="../../favicon.ico" sizes="any">
 <link rel="icon" type="image/png" href="../../favicon-32.png" sizes="32x32">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 <style>
   :root{
-    --ink:#1C1B19; --paper:#F7F3EC; --paper-warm:#F0EAE0;
-    --sienna:#C0532D; --savanna:#3D5A45; --gray:#8A8275; --line:rgba(28,27,25,0.14);
+    --ink:#171A2B; --paper:#FFFFFF; --paper-warm:#FBEAEB;
+    --royal:#3447AA; --rose:#C6517A; --gray:#6B7280; --line:rgba(23,26,43,0.14);
     --serif:'Fraunces',serif; --sans:'Inter',sans-serif; --mono:'JetBrains Mono',monospace;
   }
   *{margin:0;padding:0;box-sizing:border-box;}
@@ -20,7 +20,7 @@
   @media (prefers-reduced-motion: reduce){*{animation-duration:0.01ms !important; transition-duration:0.01ms !important;}}
 
   nav{position:sticky; top:0; z-index:50; display:flex; align-items:center; justify-content:space-between;
-    padding:22px 48px; background:rgba(247,243,236,0.88); backdrop-filter:blur(8px); border-bottom:1px solid var(--line);}
+    padding:22px 48px; background:rgba(255,255,255,0.88); backdrop-filter:blur(8px); border-bottom:1px solid var(--line);}
   .nav-name{font-family:var(--serif); font-weight:600; font-size:18px;}
   .nav-links{display:flex; gap:34px; font-size:14px; font-weight:500;}
   .nav-links a{opacity:0.72; transition:opacity .2s;}
@@ -28,43 +28,58 @@
   @media (max-width:560px){nav{padding:16px 20px;} .nav-links{gap:16px; font-size:12.5px;}}
 
   .breadcrumb{max-width:760px; margin:0 auto; padding:32px 24px 0; font-family:var(--mono); font-size:12.5px; color:var(--gray);}
-  .breadcrumb a{color:var(--sienna); border-bottom:1px solid transparent; transition:border-color .2s;}
-  .breadcrumb a:hover{border-color:var(--sienna);}
+  .breadcrumb a{color:var(--royal); border-bottom:1px solid transparent; transition:border-color .2s;}
+  .breadcrumb a:hover{border-color:var(--royal);}
 
   article{max-width:760px; margin:0 auto; padding:24px 24px 80px;}
   .doc-head{padding:24px 0 32px; border-bottom:2px solid var(--ink); margin-bottom:32px;}
-  .doc-head .tag{font-family:var(--mono); font-size:12px; color:var(--sienna); text-transform:uppercase; letter-spacing:0.05em; margin-bottom:10px; display:block;}
+  .doc-head .tag{font-family:var(--mono); font-size:12px; color:var(--royal); text-transform:uppercase; letter-spacing:0.05em; margin-bottom:10px; display:block;}
   .doc-head h1{font-family:var(--serif); font-weight:600; font-size:clamp(28px,3.6vw,38px); letter-spacing:-0.01em; line-height:1.2;}
-  .doc-head .lede{margin-top:14px; font-size:16px; color:#4a4742; line-height:1.7;}
+  .doc-head .lede{margin-top:14px; font-size:16px; color:#383F52; line-height:1.7;}
   .doc-head .links{margin-top:18px; display:flex; gap:20px; font-size:13.5px; font-weight:600; flex-wrap:wrap;}
-  .doc-head .links a{color:var(--sienna);}
+  .doc-head .links a{color:var(--royal);}
   .doc-head .links a:hover{text-decoration:underline;}
 
   article h2{font-family:var(--serif); font-weight:600; font-size:22px; margin:38px 0 14px; letter-spacing:-0.01em;}
-  article h3{font-family:var(--mono); font-size:12.5px; text-transform:uppercase; letter-spacing:0.05em; color:var(--savanna); margin:26px 0 10px;}
-  article p{font-size:15px; color:#3a3733; line-height:1.75; margin-bottom:12px;}
+  article h3{font-family:var(--mono); font-size:12.5px; text-transform:uppercase; letter-spacing:0.05em; color:var(--rose); margin:26px 0 10px;}
+  article p{font-size:15px; color:#262B3D; line-height:1.75; margin-bottom:12px;}
   article ul, article ol{padding-left:20px; margin-bottom:14px;}
-  article li{font-size:15px; color:#3a3733; line-height:1.7; padding:3px 0;}
+  article li{font-size:15px; color:#262B3D; line-height:1.7; padding:3px 0;}
 
-  .finding-box{background:var(--paper-warm); border-left:3px solid var(--sienna); padding:18px 22px; margin:20px 0; border-radius:0 4px 4px 0;}
-  .finding-box .label{font-family:var(--mono); font-size:11px; color:var(--sienna); text-transform:uppercase; letter-spacing:0.05em; display:block; margin-bottom:8px;}
+  .finding-box{background:var(--paper-warm); border-left:3px solid var(--royal); padding:18px 22px; margin:20px 0; border-radius:0 4px 4px 0;}
+  .finding-box .label{font-family:var(--mono); font-size:11px; color:var(--royal); text-transform:uppercase; letter-spacing:0.05em; display:block; margin-bottom:8px;}
   .finding-box p{margin-bottom:0;}
 
   table{width:100%; border-collapse:collapse; margin:18px 0; font-size:13.5px;}
   thead th{background:var(--ink); color:var(--paper); font-family:var(--mono); font-size:11px; text-transform:uppercase; letter-spacing:0.04em; padding:10px 14px; text-align:left;}
   thead th.num{text-align:right;}
-  tbody td{padding:10px 14px; border-bottom:1px solid var(--line); color:#3a3733;}
+  tbody td{padding:10px 14px; border-bottom:1px solid var(--line); color:#262B3D;}
   tbody tr:nth-child(even){background:var(--paper-warm);}
   tbody td:first-child{font-weight:600;}
   td.num, th.num{text-align:right; font-family:var(--mono);}
   .row-best td{background:rgba(192,83,45,0.10);}
 
   .pill-row{display:flex; gap:8px; flex-wrap:wrap; margin:18px 0;}
-  .pill{font-family:var(--mono); font-size:11px; color:var(--savanna); background:rgba(61,90,69,0.08); padding:4px 10px; border-radius:20px;}
+  .pill{font-family:var(--mono); font-size:11px; color:var(--rose); background:rgba(198,81,122,0.10); padding:4px 10px; border-radius:20px;}
 
   .credit-note{font-size:13px; color:var(--gray); font-style:italic; margin-top:24px; padding-top:18px; border-top:1px solid var(--line); line-height:1.6;}
 
   footer{padding:40px 48px; text-align:center; font-family:var(--mono); font-size:12px; color:var(--gray);}
+
+  /* -- motion: nav shrink on scroll -- */
+  nav{transition:padding .25s ease, box-shadow .25s ease;}
+  nav.scrolled{padding-top:14px !important; padding-bottom:14px !important; box-shadow:0 6px 20px rgba(23,26,43,0.06);}
+
+  /* -- motion: header entrance + progressive content reveal -- */
+  .doc-head{animation:pageIn .7s cubic-bezier(.16,.84,.44,1) both;}
+  @keyframes pageIn{from{opacity:0; transform:translateY(12px);} to{opacity:1; transform:translateY(0);}}
+  article > *:not(.doc-head){
+    opacity:0; transform:translateY(16px);
+    transition:opacity .6s cubic-bezier(.16,.84,.44,1), transform .6s cubic-bezier(.16,.84,.44,1);
+  }
+  article > *.in-view{opacity:1; transform:translateY(0);}
+  .pill{transition:background .2s ease, color .2s ease;}
+  .pill:hover{background:var(--rose); color:#fff;}
 </style>
 </head>
 <body>
@@ -85,14 +100,14 @@
   <div class="doc-head">
     <span class="tag">Project Notes · MSc Thesis</span>
     <h1>Deep Learning for Cervical Cancer Screening in Benin</h1>
-    <p class="lede">A web-based diagnostic tool that classifies colposcopy images into six diagnostic categories in real time, and shows clinicians where the lesion is — built and validated with the Departmental University Hospital of Parakou (CHUD-B/A).</p>
+    <p class="lede">A web-based diagnostic tool that classifies colposcopy images into six diagnostic categories in real time, and shows clinicians where the lesion is - built and validated with the Departmental University Hospital of Parakou (CHUD-B/A).</p>
     <div class="links">
       <a href="../../papers/Cervical_Cancer_Colposcopy_Diagnostic_Tool.pdf" target="_blank" rel="noopener">Read full thesis (PDF) ↗</a>
     </div>
   </div>
 
   <h2>The problem</h2>
-  <p>Cervical cancer is the second most common cancer among women in Benin and the leading cause of female cancer deaths, with roughly 1,000+ new cases and ~700 deaths each year. There is no national screening program, trained colposcopists are scarce, and colposcopy itself is subjective — diagnostic accuracy depends heavily on the examining clinician. The goal of the thesis was to build an AI tool that standardizes reading of colposcopy images and works on standard hardware in a low-resource clinic.</p>
+  <p>Cervical cancer is the second most common cancer among women in Benin and the leading cause of female cancer deaths, with roughly 1,000+ new cases and ~700 deaths each year. There is no national screening program, trained colposcopists are scarce, and colposcopy itself is subjective - diagnostic accuracy depends heavily on the examining clinician. The goal of the thesis was to build an AI tool that standardizes reading of colposcopy images and works on standard hardware in a low-resource clinic.</p>
 
   <h2>Key result</h2>
   <div class="finding-box">
@@ -126,20 +141,20 @@
     </tbody>
   </table>
   <ul>
-    <li><strong>U-Net + SVM</strong> — segments the cervix, extracts 90 radiomic features, reduces with PCA, classifies with an RBF-kernel SVM. Lightest and fastest (≈3.5 images/sec); weakest on intermediate lesions (CIN1 vs CIN2).</li>
-    <li><strong>VGG-19 transfer learning</strong> — ImageNet backbone with a custom head, fine-tuned in two phases. Best overall, and strongest on the clinically important CIN classes. Selected for deployment.</li>
-    <li><strong>CYENET</strong> — a specialized attention-based architecture. Excelled on benign cases (metaplasia and ectropion, F1 96%) but weaker on CIN grades.</li>
+    <li><strong>U-Net + SVM</strong> - segments the cervix, extracts 90 radiomic features, reduces with PCA, classifies with an RBF-kernel SVM. Lightest and fastest (≈3.5 images/sec); weakest on intermediate lesions (CIN1 vs CIN2).</li>
+    <li><strong>VGG-19 transfer learning</strong> - ImageNet backbone with a custom head, fine-tuned in two phases. Best overall, and strongest on the clinically important CIN classes. Selected for deployment.</li>
+    <li><strong>CYENET</strong> - a specialized attention-based architecture. Excelled on benign cases (metaplasia and ectropion, F1 96%) but weaker on CIN grades.</li>
   </ul>
 
   <h2>Why VGG-19 was chosen</h2>
-  <p>The ~4-point accuracy edge over CYENET translates to roughly 12 additional correct classifications per 270 test cases — meaningful in a diagnostic setting — while keeping precision and recall balanced, which limits both missed lesions and false alarms.</p>
+  <p>The ~4-point accuracy edge over CYENET translates to roughly 12 additional correct classifications per 270 test cases - meaningful in a diagnostic setting - while keeping precision and recall balanced, which limits both missed lesions and false alarms.</p>
 
   <h2>The deployed tool</h2>
   <ul>
     <li>React front-end + FastAPI back-end; runs on a standard browser, no specialized software to install</li>
     <li>Two input modes: upload a colposcopy image, or capture one live through the interface</li>
     <li>Returns the predicted class, confidence across all six categories, and a Grad-CAM heatmap of the affected region</li>
-    <li>Four-language interface — French, English, Fon, and Yoruba — for the local clinical context</li>
+    <li>Four-language interface - French, English, Fon, and Yoruba - for the local clinical context</li>
     <li>Access is restricted to approved researchers; outputs are explicitly not a substitute for clinical diagnosis at this stage</li>
   </ul>
 
@@ -148,12 +163,24 @@
   </div>
 
   <h2>Limitations</h2>
-  <p>The original dataset was small (494 images) and single-center; augmentation balances classes but cannot replicate real clinical variability. Training ran on standard CPU hardware, constraining model size and tuning. No external validation on data from other hospitals was performed — the main priority for future work, alongside expanding the dataset across multiple Benin sites.</p>
+  <p>The original dataset was small (494 images) and single-center; augmentation balances classes but cannot replicate real clinical variability. Training ran on standard CPU hardware, constraining model size and tuning. No external validation on data from other hospitals was performed - the main priority for future work, alongside expanding the dataset across multiple Benin sites.</p>
 
   <p class="credit-note">MSc thesis, African School of Economics (September 2025) · Supervised by Prof. Songbian Zime · Data: CHUD-B/A Parakou, anonymized colposcopy images. Author: Jesugnon David Janvier Koumagnon.</p>
 </article>
 
 <footer>© 2026 Jesugnon David Janvier Koumagnon</footer>
 
+
+<script>
+  (function(){
+    var nav = document.querySelector('nav');
+    if(nav){ window.addEventListener('scroll', function(){ nav.classList.toggle('scrolled', window.scrollY > 10); }, {passive:true}); }
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('in-view'); io.unobserve(e.target); } });
+    }, {threshold:0.1, rootMargin:'0px 0px -40px 0px'});
+    var items = document.querySelectorAll('article > *:not(.doc-head)');
+    items.forEach(function(el,i){ el.style.transitionDelay = ((i % 3) * 60) + 'ms'; io.observe(el); });
+  })();
+</script>
 </body>
 </html>

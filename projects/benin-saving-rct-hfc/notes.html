@@ -3,15 +3,15 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Project Notes: Benin Saving RCT HFC — Jesugnon Koumagnon</title>
+<title>Project Notes: Benin Saving RCT HFC - Jesugnon Koumagnon</title>
 <link rel="icon" href="../../favicon.ico" sizes="any">
 <link rel="icon" type="image/png" href="../../favicon-32.png" sizes="32x32">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 <style>
   :root{
-    --ink:#1C1B19; --paper:#F7F3EC; --paper-warm:#F0EAE0;
-    --sienna:#C0532D; --savanna:#3D5A45; --gray:#8A8275; --line:rgba(28,27,25,0.14);
+    --ink:#171A2B; --paper:#FFFFFF; --paper-warm:#FBEAEB;
+    --royal:#3447AA; --rose:#C6517A; --gray:#6B7280; --line:rgba(23,26,43,0.14);
     --serif:'Fraunces',serif; --sans:'Inter',sans-serif; --mono:'JetBrains Mono',monospace;
   }
   *{margin:0;padding:0;box-sizing:border-box;}
@@ -20,7 +20,7 @@
   @media (prefers-reduced-motion: reduce){*{animation-duration:0.01ms !important; transition-duration:0.01ms !important;}}
 
   nav{position:sticky; top:0; z-index:50; display:flex; align-items:center; justify-content:space-between;
-    padding:22px 48px; background:rgba(247,243,236,0.88); backdrop-filter:blur(8px); border-bottom:1px solid var(--line);}
+    padding:22px 48px; background:rgba(255,255,255,0.88); backdrop-filter:blur(8px); border-bottom:1px solid var(--line);}
   .nav-name{font-family:var(--serif); font-weight:600; font-size:18px;}
   .nav-links{display:flex; gap:34px; font-size:14px; font-weight:500;}
   .nav-links a{opacity:0.72; transition:opacity .2s;}
@@ -28,38 +28,53 @@
   @media (max-width:560px){nav{padding:16px 20px;} .nav-links{gap:16px; font-size:12.5px;}}
 
   .breadcrumb{max-width:760px; margin:0 auto; padding:32px 24px 0; font-family:var(--mono); font-size:12.5px; color:var(--gray);}
-  .breadcrumb a{color:var(--sienna); border-bottom:1px solid transparent; transition:border-color .2s;}
-  .breadcrumb a:hover{border-color:var(--sienna);}
+  .breadcrumb a{color:var(--royal); border-bottom:1px solid transparent; transition:border-color .2s;}
+  .breadcrumb a:hover{border-color:var(--royal);}
 
   article{max-width:760px; margin:0 auto; padding:24px 24px 80px;}
   .doc-head{padding:24px 0 32px; border-bottom:2px solid var(--ink); margin-bottom:32px;}
-  .doc-head .tag{font-family:var(--mono); font-size:12px; color:var(--sienna); text-transform:uppercase; letter-spacing:0.05em; margin-bottom:10px; display:block;}
+  .doc-head .tag{font-family:var(--mono); font-size:12px; color:var(--royal); text-transform:uppercase; letter-spacing:0.05em; margin-bottom:10px; display:block;}
   .doc-head h1{font-family:var(--serif); font-weight:600; font-size:clamp(28px,3.6vw,38px); letter-spacing:-0.01em; line-height:1.2;}
-  .doc-head .lede{margin-top:14px; font-size:16px; color:#4a4742; line-height:1.7;}
+  .doc-head .lede{margin-top:14px; font-size:16px; color:#383F52; line-height:1.7;}
   .doc-head .links{margin-top:18px; display:flex; gap:20px; flex-wrap:wrap; font-size:13.5px; font-weight:600;}
-  .doc-head .links a{color:var(--sienna);}
+  .doc-head .links a{color:var(--royal);}
   .doc-head .links a:hover{text-decoration:underline;}
 
   article h2{font-family:var(--serif); font-weight:600; font-size:22px; margin:38px 0 14px; letter-spacing:-0.01em;}
-  article h3{font-family:var(--mono); font-size:12.5px; text-transform:uppercase; letter-spacing:0.05em; color:var(--savanna); margin:26px 0 10px;}
-  article p{font-size:15px; color:#3a3733; line-height:1.75; margin-bottom:12px;}
+  article h3{font-family:var(--mono); font-size:12.5px; text-transform:uppercase; letter-spacing:0.05em; color:var(--rose); margin:26px 0 10px;}
+  article p{font-size:15px; color:#262B3D; line-height:1.75; margin-bottom:12px;}
   article ul, article ol{padding-left:20px; margin-bottom:14px;}
-  article li{font-size:15px; color:#3a3733; line-height:1.7; padding:3px 0;}
+  article li{font-size:15px; color:#262B3D; line-height:1.7; padding:3px 0;}
   article code{font-family:var(--mono); font-size:13px; background:var(--paper-warm); padding:2px 6px; border-radius:3px;}
-  article pre{font-family:var(--mono); font-size:13px; background:var(--ink); color:#E2DDD2; padding:18px 20px; border-radius:6px; overflow-x:auto; margin:16px 0;}
+  article pre{font-family:var(--mono); font-size:13px; background:var(--ink); color:#C9CDE0; padding:18px 20px; border-radius:6px; overflow-x:auto; margin:16px 0;}
 
   table{width:100%; border-collapse:collapse; margin:18px 0; font-size:13.5px;}
   thead th{background:var(--ink); color:var(--paper); font-family:var(--mono); font-size:11px; text-transform:uppercase; letter-spacing:0.04em; padding:10px 14px; text-align:left;}
-  tbody td{padding:10px 14px; border-bottom:1px solid var(--line); color:#3a3733;}
+  tbody td{padding:10px 14px; border-bottom:1px solid var(--line); color:#262B3D;}
   tbody tr:nth-child(even){background:var(--paper-warm);}
   tbody td:first-child{font-weight:600;}
 
   .pill-row{display:flex; gap:8px; flex-wrap:wrap; margin:18px 0;}
-  .pill{font-family:var(--mono); font-size:11px; color:var(--savanna); background:rgba(61,90,69,0.08); padding:4px 10px; border-radius:20px;}
+  .pill{font-family:var(--mono); font-size:11px; color:var(--rose); background:rgba(198,81,122,0.10); padding:4px 10px; border-radius:20px;}
 
   .credit-note{font-size:13px; color:var(--gray); font-style:italic; margin-top:24px; padding-top:18px; border-top:1px solid var(--line); line-height:1.6;}
 
   footer{padding:40px 48px; text-align:center; font-family:var(--mono); font-size:12px; color:var(--gray);}
+
+  /* -- motion: nav shrink on scroll -- */
+  nav{transition:padding .25s ease, box-shadow .25s ease;}
+  nav.scrolled{padding-top:14px !important; padding-bottom:14px !important; box-shadow:0 6px 20px rgba(23,26,43,0.06);}
+
+  /* -- motion: header entrance + progressive content reveal -- */
+  .doc-head{animation:pageIn .7s cubic-bezier(.16,.84,.44,1) both;}
+  @keyframes pageIn{from{opacity:0; transform:translateY(12px);} to{opacity:1; transform:translateY(0);}}
+  article > *:not(.doc-head){
+    opacity:0; transform:translateY(16px);
+    transition:opacity .6s cubic-bezier(.16,.84,.44,1), transform .6s cubic-bezier(.16,.84,.44,1);
+  }
+  article > *.in-view{opacity:1; transform:translateY(0);}
+  .pill{transition:background .2s ease, color .2s ease;}
+  .pill:hover{background:var(--rose); color:#fff;}
 </style>
 </head>
 <body>
@@ -79,7 +94,7 @@
 <article>
   <div class="doc-head">
     <span class="tag">Project Notes · Field Data Quality</span>
-    <h1>High-Frequency Data Quality Checks — Saving Treatment RCT, Benin (2024)</h1>
+    <h1>High-Frequency Data Quality Checks - Saving Treatment RCT, Benin (2024)</h1>
     <p class="lede">Stata scripts for real-time field data quality monitoring during a randomized controlled trial on savings behavior, conducted as part of a Research Assistant role at the African School of Economics.</p>
     <div class="links">
       <a href="scripts/HFC_Saving_Treatment.do" target="_blank" rel="noopener">HFC script ↗</a>
@@ -88,11 +103,11 @@
   </div>
 
   <h2>Context</h2>
-  <p>As part of an RCT studying savings behavior and financial inclusion in rural Benin (2024), field data was collected via KoboCollect and needed to be checked for quality issues <em>during</em> data collection — not after — so enumeration problems could be caught and corrected while teams were still in the field.</p>
+  <p>As part of an RCT studying savings behavior and financial inclusion in rural Benin (2024), field data was collected via KoboCollect and needed to be checked for quality issues <em>during</em> data collection - not after - so enumeration problems could be caught and corrected while teams were still in the field.</p>
 
   <h2>What these scripts do</h2>
 
-  <h3>HFC_Saving_Treatment.do — High Frequency Checks</h3>
+  <h3>HFC_Saving_Treatment.do - High Frequency Checks</h3>
   <p>A data quality pipeline run against each new batch of incoming survey data:</p>
   <table>
     <thead><tr><th>Check</th><th>What it does</th></tr></thead>
@@ -106,10 +121,10 @@
   </table>
   <p>Every flagged issue is exported automatically to a structured Excel workbook (one sheet per check), ready for enumerator follow-up.</p>
 
-  <h3>Funnel_Attrition_Analysis.do — Respondent Funnel Tracking</h3>
+  <h3>Funnel_Attrition_Analysis.do - Respondent Funnel Tracking</h3>
   <p>Tracks the sample through each stage of contact and eligibility:</p>
   <pre>Total sample → reachable → not already connected → not already paying fees → net savers
-     277      →    254     →        235           →          225           →    —</pre>
+     277      →    254     →        235           →          225           →    -</pre>
   <p>This produces a running count at each stage so the research team always knows the effective sample size for analysis as fieldwork progresses.</p>
 
   <div class="pill-row">
@@ -117,12 +132,24 @@
   </div>
 
   <h2>Notes on this code</h2>
-  <p>File paths have been anonymized and one real respondent name appearing in a data-correction line has been redacted before publishing — the underlying survey microdata itself is not included or shared here. Written for Stata 16, using <code>kobo2stata</code> to merge raw KoboCollect exports with the survey questionnaire/choice labels, and <code>tabout</code> for formatted tabulations.</p>
+  <p>File paths have been anonymized and one real respondent name appearing in a data-correction line has been redacted before publishing - the underlying survey microdata itself is not included or shared here. Written for Stata 16, using <code>kobo2stata</code> to merge raw KoboCollect exports with the survey questionnaire/choice labels, and <code>tabout</code> for formatted tabulations.</p>
 
   <p class="credit-note">Author: Jesugnon David Janvier Koumagnon · African School of Economics, 2024</p>
 </article>
 
 <footer>© 2026 Jesugnon David Janvier Koumagnon</footer>
 
+
+<script>
+  (function(){
+    var nav = document.querySelector('nav');
+    if(nav){ window.addEventListener('scroll', function(){ nav.classList.toggle('scrolled', window.scrollY > 10); }, {passive:true}); }
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('in-view'); io.unobserve(e.target); } });
+    }, {threshold:0.1, rootMargin:'0px 0px -40px 0px'});
+    var items = document.querySelectorAll('article > *:not(.doc-head)');
+    items.forEach(function(el,i){ el.style.transitionDelay = ((i % 3) * 60) + 'ms'; io.observe(el); });
+  })();
+</script>
 </body>
 </html>

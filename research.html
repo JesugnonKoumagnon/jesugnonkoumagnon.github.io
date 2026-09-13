@@ -3,11 +3,11 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Research — Jesugnon Koumagnon</title>
+<title>Research - Jesugnon Koumagnon</title>
 <link rel="icon" href="favicon.ico" sizes="any">
 <link rel="icon" type="image/png" href="favicon-32.png" sizes="32x32">
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
-<meta property="og:title" content="Research — Jesugnon Koumagnon">
+<meta property="og:title" content="Research - Jesugnon Koumagnon">
 <meta property="og:description" content="Applied empirical work on climate, conflict, and social protection across Sub-Saharan Africa.">
 <meta property="og:image" content="og-image.jpg">
 <meta property="og:type" content="website">
@@ -17,8 +17,8 @@
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 <style>
   :root{
-    --ink:#1C1B19; --paper:#F7F3EC; --paper-warm:#F0EAE0;
-    --sienna:#C0532D; --savanna:#3D5A45; --gray:#8A8275; --line:rgba(28,27,25,0.14);
+    --ink:#171A2B; --paper:#FFFFFF; --paper-warm:#FBEAEB;
+    --royal:#3447AA; --rose:#C6517A; --gray:#6B7280; --line:rgba(23,26,43,0.14);
     --serif:'Fraunces',serif; --sans:'Inter',sans-serif; --mono:'JetBrains Mono',monospace;
   }
   *{margin:0;padding:0;box-sizing:border-box;}
@@ -27,20 +27,20 @@
   @media (prefers-reduced-motion: reduce){*{animation-duration:0.01ms !important; transition-duration:0.01ms !important;}}
 
   nav{position:sticky; top:0; z-index:50; display:flex; align-items:center; justify-content:space-between;
-    padding:22px 48px; background:rgba(247,243,236,0.88); backdrop-filter:blur(8px); border-bottom:1px solid var(--line);}
+    padding:22px 48px; background:rgba(255,255,255,0.88); backdrop-filter:blur(8px); border-bottom:1px solid var(--line);}
   .nav-name{font-family:var(--serif); font-weight:600; font-size:18px;}
   .nav-links{display:flex; gap:34px; font-size:14px; font-weight:500;}
   .nav-links a{position:relative; opacity:0.72; transition:opacity .2s;}
   .nav-links a:hover{opacity:1;}
   .nav-links a.active{opacity:1;}
-  .nav-links a.active::after{content:''; position:absolute; left:0; right:0; bottom:-6px; height:2px; background:var(--sienna);}
+  .nav-links a.active::after{content:''; position:absolute; left:0; right:0; bottom:-6px; height:2px; background:var(--royal);}
   @media (max-width:760px){nav{padding:18px 22px;} .nav-links{gap:18px; font-size:12.5px;}}
 
   .page-head{padding:70px 48px 40px; max-width:1180px; margin:0 auto;}
-  .eyebrow{font-family:var(--mono); font-size:12.5px; letter-spacing:0.08em; color:var(--sienna); text-transform:uppercase; margin-bottom:16px; display:flex; align-items:center; gap:10px;}
-  .eyebrow::before{content:''; width:18px; height:1px; background:var(--sienna);}
+  .eyebrow{font-family:var(--mono); font-size:12.5px; letter-spacing:0.08em; color:var(--royal); text-transform:uppercase; margin-bottom:16px; display:flex; align-items:center; gap:10px;}
+  .eyebrow::before{content:''; width:18px; height:1px; background:var(--royal);}
   .page-head h1{font-family:var(--serif); font-weight:600; font-size:clamp(34px,4.4vw,52px); letter-spacing:-0.01em; max-width:680px;}
-  .page-head h1 em{font-style:italic; color:var(--savanna); font-weight:500;}
+  .page-head h1 em{font-style:italic; color:var(--rose); font-weight:500;}
   .page-head p{margin-top:18px; max-width:600px; color:var(--gray); font-size:16px;}
   @media (max-width:760px){.page-head{padding:50px 22px 30px;}}
 
@@ -51,20 +51,20 @@
   .paper-meta .year{color:var(--ink); font-weight:600; font-size:14px; display:block; margin-bottom:6px;}
   .paper-meta .status{display:inline-block; margin-top:10px; padding:3px 9px; border:1px solid var(--line); border-radius:20px; font-size:10.5px; letter-spacing:0.03em;}
   .paper h2{font-family:var(--serif); font-weight:600; font-size:clamp(24px,2.6vw,30px); margin-bottom:16px; letter-spacing:-0.01em;}
-  .paper .lede{font-size:15.5px; color:#4a4742; line-height:1.75; margin-bottom:20px;}
+  .paper .lede{font-size:15.5px; color:#383F52; line-height:1.75; margin-bottom:20px;}
   .paper .finding{
-    background:var(--paper-warm); border-left:3px solid var(--sienna); padding:16px 20px; margin-bottom:22px;
+    background:var(--paper-warm); border-left:3px solid var(--royal); padding:16px 20px; margin-bottom:22px;
     font-size:14.5px; line-height:1.7;
   }
-  .paper .finding strong{color:var(--sienna); font-family:var(--mono); font-size:11.5px; letter-spacing:0.04em; text-transform:uppercase; display:block; margin-bottom:6px;}
-  .paper h4{font-family:var(--mono); font-size:11.5px; letter-spacing:0.05em; text-transform:uppercase; color:var(--savanna); margin:22px 0 10px;}
+  .paper .finding strong{color:var(--royal); font-family:var(--mono); font-size:11.5px; letter-spacing:0.04em; text-transform:uppercase; display:block; margin-bottom:6px;}
+  .paper h4{font-family:var(--mono); font-size:11.5px; letter-spacing:0.05em; text-transform:uppercase; color:var(--rose); margin:22px 0 10px;}
   .paper ul{padding-left:18px; margin-bottom:6px;}
-  .paper li{font-size:14.5px; color:#4a4742; padding:4px 0; line-height:1.6;}
+  .paper li{font-size:14.5px; color:#383F52; padding:4px 0; line-height:1.6;}
   .pill-row{display:flex; gap:8px; flex-wrap:wrap; margin-top:18px;}
-  .pill{font-family:var(--mono); font-size:11px; color:var(--savanna); background:rgba(61,90,69,0.08); padding:4px 10px; border-radius:20px;}
+  .pill{font-family:var(--mono); font-size:11px; color:var(--rose); background:rgba(198,81,122,0.10); padding:4px 10px; border-radius:20px;}
   .paper-links{margin-top:22px; display:flex; gap:20px; flex-wrap:wrap; font-size:13.5px; font-weight:600;}
-  .paper-links a{color:var(--sienna); border-bottom:1.5px solid transparent; padding-bottom:2px; transition:border-color .2s;}
-  .paper-links a:hover{border-color:var(--sienna);}
+  .paper-links a{color:var(--royal); border-bottom:1.5px solid transparent; padding-bottom:2px; transition:border-color .2s;}
+  .paper-links a:hover{border-color:var(--royal);}
   .credit-note{font-size:13px; color:var(--gray); font-style:italic; margin-top:18px; line-height:1.6;}
   .paper-map{margin:20px 0; border:1px solid var(--line); border-radius:4px; overflow:hidden; background:var(--paper-warm);}
   .paper-map img{width:100%; display:block;}
@@ -78,23 +78,40 @@
   .code-section{padding:64px 48px; max-width:1180px; margin:0 auto;}
   .code-grid{display:grid; grid-template-columns:repeat(2,1fr); gap:1px; background:var(--line); border:1px solid var(--line); margin-top:32px;}
   .code-card{background:var(--paper); padding:26px; display:flex; flex-direction:column;}
-  .code-card .tag{font-family:var(--mono); font-size:11px; color:var(--sienna); letter-spacing:0.04em; text-transform:uppercase; margin-bottom:10px;}
+  .code-card .tag{font-family:var(--mono); font-size:11px; color:var(--royal); letter-spacing:0.04em; text-transform:uppercase; margin-bottom:10px;}
   .code-card h3{font-family:var(--serif); font-size:17px; font-weight:600; margin-bottom:8px; line-height:1.3;}
   .code-card p{font-size:13px; color:var(--gray); line-height:1.6; flex:1; margin-bottom:14px;}
-  .code-card a{font-size:13px; font-weight:600; color:var(--sienna);}
+  .code-card a{font-size:13px; font-weight:600; color:var(--royal);}
   .code-card a:hover{text-decoration:underline;}
   @media (max-width:760px){.code-grid{grid-template-columns:1fr;}}
   .glossary-grid{display:grid; grid-template-columns:repeat(2,1fr); gap:1px; background:var(--line); border:1px solid var(--line); margin-top:32px;}
   .glossary-card{background:var(--paper); padding:24px;}
-  .glossary-card .term{font-family:var(--mono); font-weight:600; font-size:13.5px; color:var(--sienna); margin-bottom:8px;}
+  .glossary-card .term{font-family:var(--mono); font-weight:600; font-size:13.5px; color:var(--royal); margin-bottom:8px;}
   .glossary-card p{font-size:13.5px; color:var(--gray); line-height:1.6;}
   @media (max-width:760px){.glossary-grid{grid-template-columns:1fr;}}
 
   footer{padding:54px 48px; text-align:center;}
   footer .contact-links{display:flex; gap:28px; justify-content:center; flex-wrap:wrap; font-size:14.5px; font-weight:600; margin-top:18px;}
   footer .contact-links a{padding-bottom:3px; border-bottom:1.5px solid transparent; transition:border-color .2s;}
-  footer .contact-links a:hover{border-color:var(--sienna);}
+  footer .contact-links a:hover{border-color:var(--royal);}
   footer .copyright{margin-top:32px; font-family:var(--mono); font-size:12px; color:var(--gray);}
+
+  /* -- motion: nav shrink on scroll -- */
+  nav{transition:padding .25s ease, box-shadow .25s ease;}
+  nav.scrolled{padding-top:14px !important; padding-bottom:14px !important; box-shadow:0 6px 20px rgba(23,26,43,0.06);}
+
+  /* -- motion: scroll-reveal for repeating content blocks -- */
+  .focus-card,.project-row,.entry,.paper,.code-card,.glossary-card,.talk-item,.cert-item{
+    opacity:0; transform:translateY(18px);
+    transition:opacity .7s cubic-bezier(.16,.84,.44,1), transform .7s cubic-bezier(.16,.84,.44,1);
+  }
+  .focus-card.in-view,.project-row.in-view,.entry.in-view,.paper.in-view,.code-card.in-view,.glossary-card.in-view,.talk-item.in-view,.cert-item.in-view{
+    opacity:1; transform:translateY(0);
+  }
+
+  /* -- motion: page-load entrance for the header area -- */
+  .hero,.page-head{animation:pageIn .8s cubic-bezier(.16,.84,.44,1) both;}
+  @keyframes pageIn{from{opacity:0; transform:translateY(12px);} to{opacity:1; transform:translateY(0);}}
 </style>
 </head>
 <body>
@@ -112,23 +129,23 @@
 <div class="page-head">
   <div class="eyebrow">Selected work</div>
   <h1>Research &amp; <em>applied projects.</em></h1>
-  <p>Empirical and data-science work spanning climate and conflict, poverty and social protection, humanitarian data systems, and machine learning for health — combining econometrics, GIS, survey and RCT data, and deep learning across Sub-Saharan Africa.</p>
+  <p>Empirical and data-science work spanning climate and conflict, poverty and social protection, humanitarian data systems, and machine learning for health - combining econometrics, GIS, survey and RCT data, and deep learning across Sub-Saharan Africa.</p>
 </div>
 
 <div class="divider"></div>
 
 <article class="paper" id="impact">
   <div class="paper-meta">
-    <span class="year">2026 —</span>
-    Sudan — Kordofan, Darfur Regions<br>Impact Initiatives
+    <span class="year">2026 - Present</span>
+    Sudan - Kordofan, Darfur Regions<br>Impact Initiatives
     <span class="status">Current Role</span>
   </div>
   <div>
-    <h2>Data Officer — Research Cycle Management</h2>
-    <p class="lede">Supporting a portfolio of humanitarian needs assessments and information management products across Sudan, from sampling design and tool development through to data cleaning and dashboard delivery — working alongside assessment and GIS teams.</p>
+    <h2>Data Officer - Research Cycle Management</h2>
+    <p class="lede">Supporting a portfolio of humanitarian needs assessments and information management products across Sudan, from sampling design and tool development through to data cleaning and dashboard delivery - working alongside assessment and GIS teams.</p>
     <h4>Current projects</h4>
     <ul>
-      <li><strong>Food Security, Livelihoods &amp; Nutrition Assessment — Kordofan Regions:</strong> data collection and cleaning across 10 localities; analysis and reporting ongoing</li>
+      <li><strong>Food Security, Livelihoods &amp; Nutrition Assessment - Kordofan Regions:</strong> data collection and cleaning across 10 localities; analysis and reporting ongoing</li>
       <li><strong>Movement Intention Surveys:</strong> two displacement-site assessments in White Nile, plus a survey covering North &amp; West Kordofan and Darfur regions</li>
       <li><strong>MSNA (Multi-Sector Needs Assessment):</strong> sampling design and tool preparation</li>
       <li><strong>Rapid Needs Assessment:</strong> tool preparation and deployment</li>
@@ -155,7 +172,7 @@
     <p class="lede">My master's thesis: building and comparing three deep-learning pipelines to classify colposcopy images into six diagnostic categories, then deploying the best model as a real-time, multilingual web tool for clinicians at the Departmental University Hospital of Parakou (CHUD-B/A), Benin.</p>
     <div class="finding">
       <strong>Key finding</strong>
-      A VGG-19 transfer-learning model gave the best performance — 89.17% accuracy (precision 89.28%, recall 89.17%, F1 89.22%) across six classes — ahead of an attention-based CYENET model (85.19%) and a U-Net + SVM pipeline (84%). It is deployed in a web app (EmiloVision Benin) with file-upload and live-camera capture, returning an automated classification, per-class confidence scores, and a Grad-CAM overlay of the affected area.
+      A VGG-19 transfer-learning model gave the best performance - 89.17% accuracy (precision 89.28%, recall 89.17%, F1 89.22%) across six classes - ahead of an attention-based CYENET model (85.19%) and a U-Net + SVM pipeline (84%). It is deployed in a web app (EmiloVision Benin) with file-upload and live-camera capture, returning an automated classification, per-class confidence scores, and a Grad-CAM overlay of the affected area.
     </div>
     <h4>Method</h4>
     <ul>
@@ -166,9 +183,9 @@
     </ul>
     <h4>Model comparison</h4>
     <ul>
-      <li><strong>VGG-19 (transfer learning)</strong> — 89.17% accuracy → <em>selected for deployment</em></li>
-      <li><strong>CYENET</strong> — 85.19% accuracy; strongest on benign cases (metaplasia, ectropion, F1 96%)</li>
-      <li><strong>U-Net + SVM</strong> — 84% accuracy; lightest and fastest pipeline (3.5 images/sec)</li>
+      <li><strong>VGG-19 (transfer learning)</strong> - 89.17% accuracy → <em>selected for deployment</em></li>
+      <li><strong>CYENET</strong> - 85.19% accuracy; strongest on benign cases (metaplasia, ectropion, F1 96%)</li>
+      <li><strong>U-Net + SVM</strong> - 84% accuracy; lightest and fastest pipeline (3.5 images/sec)</li>
     </ul>
     <div class="pill-row">
       <span class="pill">Python</span><span class="pill">Deep Learning</span><span class="pill">VGG-19 / CNN</span><span class="pill">U-Net</span><span class="pill">React / FastAPI</span><span class="pill">Grad-CAM</span>
@@ -194,11 +211,11 @@
     <p class="lede">A state-level diagnostic asking whether Nigeria's three major social assistance programs (P-CGS, VGF, CCT) reach the households who need them most.</p>
     <figure class="paper-map">
       <img src="images/maps/nigeria-mpi-map.jpg" alt="Choropleth map of Nigeria showing Multidimensional Poverty Index by state, 2022">
-      <figcaption>Multidimensional poverty incidence by state — NBS (2022)</figcaption>
+      <figcaption>Multidimensional poverty incidence by state - NBS (2022)</figcaption>
     </figure>
     <div class="finding">
       <strong>Key finding</strong>
-      They largely don't. States with the highest poverty (MPI above 80% — Sokoto, Bayelsa, Gombe, Jigawa, Plateau) receive the lowest program coverage, while some moderate-poverty states show National Social Register enrolment exceeding 100% of their poor population — a sign of likely misclassification. 47.4% of Nigeria's poor are not registered at all.
+      They largely don't. States with the highest poverty (MPI above 80% - Sokoto, Bayelsa, Gombe, Jigawa, Plateau) receive the lowest program coverage, while some moderate-poverty states show National Social Register enrolment exceeding 100% of their poor population - a sign of likely misclassification. 47.4% of Nigeria's poor are not registered at all.
     </div>
     <h4>Method</h4>
     <ul>
@@ -221,24 +238,24 @@
 
 <article class="paper" id="unicef">
   <div class="paper-meta">
-    <span class="year">2024–2025</span>
+    <span class="year">2024-2025</span>
     Côte d'Ivoire<br>UNICEF / Ministry of Economy, Plan &amp; Development
     <span class="status">Government Report</span>
   </div>
   <div>
     <h2>N-MODA: National Multiple Overlapping Deprivation Analysis on Child Poverty</h2>
-    <p class="lede">As a Social Policy Intern at UNICEF Côte d'Ivoire, I led the data analysis underlying the 3rd edition of the country's official child poverty report — based on EDS 2021 survey data, using the MODA methodology to measure deprivation across 7 dimensions for children aged 0–17.</p>
+    <p class="lede">As a Social Policy Intern at UNICEF Côte d'Ivoire, I led the data analysis underlying the 3rd edition of the country's official child poverty report - based on EDS 2021 survey data, using the MODA methodology to measure deprivation across 7 dimensions for children aged 0-17.</p>
     <figure class="paper-map">
       <img src="images/maps/civ-nmoda-map.jpg" alt="Map of Côte d'Ivoire showing multidimensional child poverty incidence by region">
-      <figcaption>Multidimensional child poverty incidence by region — N-MODA 2024</figcaption>
+      <figcaption>Multidimensional child poverty incidence by region - N-MODA 2024</figcaption>
     </figure>
     <div class="finding">
       <strong>Key finding</strong>
-      8.6 million children — 62.5% of those under 18 — experience multidimensional poverty. Nearly all children (97.5%) face at least one deprivation, and 85.2% face at least two simultaneously. Deprivation is most severe for children aged 0–4 (68% poor) and is consistently higher for girls, particularly in the health dimension (57%).
+      8.6 million children - 62.5% of those under 18 - experience multidimensional poverty. Nearly all children (97.5%) face at least one deprivation, and 85.2% face at least two simultaneously. Deprivation is most severe for children aged 0-4 (68% poor) and is consistently higher for girls, particularly in the health dimension (57%).
     </div>
     <h4>Method</h4>
     <ul>
-      <li>Applied the MODA (Multiple Overlapping Deprivation Analysis) methodology, child-centered across three life-cycle stages (0–4, 5–14, 15–17)</li>
+      <li>Applied the MODA (Multiple Overlapping Deprivation Analysis) methodology, child-centered across three life-cycle stages (0-4, 5-14, 15-17)</li>
       <li>Measured deprivation across 7 dimensions: housing, water &amp; sanitation, health, education, protection, nutrition, and child labor, using EDS 2021 survey data</li>
       <li>Aggregated indicators using a union approach within each dimension</li>
       <li>Compared trends against MICS 2016 to assess progress and regression by dimension and age group since the prior edition</li>
@@ -250,7 +267,7 @@
       <a href="https://kjjesugnon.shinyapps.io/Indicators/" target="_blank" rel="noopener">Live dashboard ↗</a>
       <a href="projects/unicef-poverty-dashboard/notes.html" target="_blank" rel="noopener">Project notes ↗</a>
     </div>
-    <p class="credit-note">The N-MODA report is an official publication of Côte d'Ivoire's Ministry of Economy, Plan and Development (Office National de la Population) in collaboration with UNICEF, validated December 2024. It is linked here as a credit to my contribution, not republished — underlying EDS 2021 microdata is confidential.</p>
+    <p class="credit-note">The N-MODA report is an official publication of Côte d'Ivoire's Ministry of Economy, Plan and Development (Office National de la Population) in collaboration with UNICEF, validated December 2024. It is linked here as a credit to my contribution, not republished - underlying EDS 2021 microdata is confidential.</p>
   </div>
 </article>
 
@@ -258,20 +275,20 @@
 
 <article class="paper" id="socioeco">
   <div class="paper-meta">
-    <span class="year">2024–2025</span>
+    <span class="year">2024-2025</span>
     Côte d'Ivoire<br>UNICEF
     <span class="status">Companion Analysis</span>
   </div>
   <div>
     <h2>Socioeconomic Analysis &amp; Child Well-Being: Budgets, Trends, and a Simulation</h2>
-    <p class="lede">A companion analysis to N-MODA, linking Côte d'Ivoire's macroeconomic trends and social-sector budget allocations (2020–2024) to outcomes for children, with an elasticity-based simulation projecting education indicators forward.</p>
+    <p class="lede">A companion analysis to N-MODA, linking Côte d'Ivoire's macroeconomic trends and social-sector budget allocations (2020-2024) to outcomes for children, with an elasticity-based simulation projecting education indicators forward.</p>
     <div class="finding">
       <strong>Key finding</strong>
-      Despite real GDP growth of 44% between 2019 and 2024, social-sector spending fell from 28.7% to 22.7% of the national budget over the same period — education's share alone dropped from 17.3% to 12.4% — coinciding with a decline in primary completion rates from 83.7% (2021) to 78.6% (2023).
+      Despite real GDP growth of 44% between 2019 and 2024, social-sector spending fell from 28.7% to 22.7% of the national budget over the same period - education's share alone dropped from 17.3% to 12.4% - coinciding with a decline in primary completion rates from 83.7% (2021) to 78.6% (2023).
     </div>
     <h4>Method</h4>
     <ul>
-      <li>Compiled macroeconomic indicators (GDP, inflation, poverty rate, Gini) and social-sector budget shares, 2019–2024, from WDI, IMF, and Ivorian finance law data</li>
+      <li>Compiled macroeconomic indicators (GDP, inflation, poverty rate, Gini) and social-sector budget shares, 2019-2024, from WDI, IMF, and Ivorian finance law data</li>
       <li>Tracked budget allocation across 6 social sectors (education, health, water/sanitation, child protection, social protection, youth employment) against child welfare indicators</li>
       <li>Built an elasticity-based simulation (regression not viable given the short 5-year series) to project 2025 education indicators under a proposed 2% spending increase</li>
       <li>Projected primary completion rate recovering to 80.3% in 2025 under the increased-budget scenario, against a 2024 low of 73.8%</li>
@@ -293,20 +310,20 @@
   </div>
   <div>
     <h2>Boko Haram Violence and Climate Change in the Lake Chad Region</h2>
-    <p class="lede">A district- and grid-cell-level panel study (2009–2022, 92 administrative districts) testing whether climate anomalies — temperature, rainfall, vegetation (NDVI), and drought (SPEI) — predict the intensity and spread of Boko Haram violence, and whether that relationship depends on cropland share and urbanization.</p>
+    <p class="lede">A district- and grid-cell-level panel study (2009-2022, 92 administrative districts) testing whether climate anomalies - temperature, rainfall, vegetation (NDVI), and drought (SPEI) - predict the intensity and spread of Boko Haram violence, and whether that relationship depends on cropland share and urbanization.</p>
     <figure class="paper-map">
       <img src="images/maps/lakechad-districts-map.jpg" alt="Map of countries and districts around Lake Chad, showing the 92-district study area and grid-cell overlay">
       <figcaption>Study area: districts and grid cells across Niger, Chad, Nigeria, and Cameroon</figcaption>
     </figure>
     <div class="finding">
       <strong>Key finding</strong>
-      Drought conditions (low NDVI, low SPEI) and higher temperatures are associated with significantly higher conflict intensity at both district and cell level. Critically, this effect is not uniform: the temperature–conflict link is significantly stronger in areas with a higher cropland share — consistent with a drought-income-conflict channel where poor harvests drive unrest. Conflict also shows strong spatial spillover between neighboring districts.
+      Drought conditions (low NDVI, low SPEI) and higher temperatures are associated with significantly higher conflict intensity at both district and cell level. Critically, this effect is not uniform: the temperature-conflict link is significantly stronger in areas with a higher cropland share - consistent with a drought-income-conflict channel where poor harvests drive unrest. Conflict also shows strong spatial spillover between neighboring districts.
     </div>
     <h4>Method</h4>
     <ul>
-      <li>92 districts + grid cells (~10km²) across the Lake Chad basin, 2009–2022; conflict data from ACLED, climate data from MODIS (NDVI, temperature) and CHIRPS (rainfall)</li>
+      <li>92 districts + grid cells (~10km²) across the Lake Chad basin, 2009-2022; conflict data from ACLED, climate data from MODIS (NDVI, temperature) and CHIRPS (rainfall)</li>
       <li>Fixed-effects panel regression (Eq. 1) with climate anomalies and a spatially lagged conflict term, run separately at district and cell level</li>
-      <li>Heterogeneous-effects model (Eq. 2) interacting each climate variable with cropland share, to test whether agricultural exposure moderates the climate–conflict link</li>
+      <li>Heterogeneous-effects model (Eq. 2) interacting each climate variable with cropland share, to test whether agricultural exposure moderates the climate-conflict link</li>
       <li>A third specification interacts climate anomalies with travel time to nearest city (urbanization) to test effects on population dynamics</li>
       <li>Addressed reverse causality (lagged variables), omitted variable bias (population, infrastructure, night-lights controls), and spatial autocorrelation (spatial FE + lag)</li>
     </ul>
@@ -316,9 +333,9 @@
     </figure>
     <h4>Hypotheses tested</h4>
     <ul>
-      <li><strong>H1</strong> — Drought (low NDVI) has a negative relationship with conflict intensity → <em>confirmed</em></li>
-      <li><strong>H2</strong> — Cropland share moderates the climate–conflict relationship → <em>confirmed</em>: temperature's effect on conflict nearly doubles in high-cropland districts (interaction coefficient 1.89, p&lt;0.05)</li>
-      <li><strong>H3</strong> — Travel time to cities moderates climate's effect on population dynamics → <em>confirmed</em> at the cell level</li>
+      <li><strong>H1</strong> - Drought (low NDVI) has a negative relationship with conflict intensity → <em>confirmed</em></li>
+      <li><strong>H2</strong> - Cropland share moderates the climate-conflict relationship → <em>confirmed</em>: temperature's effect on conflict nearly doubles in high-cropland districts (interaction coefficient 1.89, p&lt;0.05)</li>
+      <li><strong>H3</strong> - Travel time to cities moderates climate's effect on population dynamics → <em>confirmed</em> at the cell level</li>
     </ul>
     <div class="pill-row">
       <span class="pill">R</span><span class="pill">ACLED</span><span class="pill">MODIS</span><span class="pill">CHIRPS</span>
@@ -335,12 +352,12 @@
 
 <section class="code-section">
   <div class="eyebrow">Code &amp; notebooks</div>
-  <h2 style="font-family:var(--serif); font-weight:600; font-size:clamp(26px,3vw,32px); max-width:600px;">Applied analysis, <em style="font-style:italic; color:var(--savanna); font-weight:500;">in code.</em></h2>
+  <h2 style="font-family:var(--serif); font-weight:600; font-size:clamp(26px,3vw,32px); max-width:600px;">Applied analysis, <em style="font-style:italic; color:var(--rose); font-weight:500;">in code.</em></h2>
   <div class="code-grid">
     <div class="code-card">
       <div class="tag">RCT Field Monitoring</div>
-      <h3>High-Frequency Checks — Saving RCT, Benin</h3>
-      <p>Stata pipeline for real-time data quality monitoring during a savings-behavior RCT: duplicate detection, skip-pattern validation, and a respondent attrition funnel — built to catch enumeration issues while teams were still in the field.</p>
+      <h3>High-Frequency Checks - Saving RCT, Benin</h3>
+      <p>Stata pipeline for real-time data quality monitoring during a savings-behavior RCT: duplicate detection, skip-pattern validation, and a respondent attrition funnel - built to catch enumeration issues while teams were still in the field.</p>
       <div style="display:flex; gap:14px; flex-wrap:wrap;">
         <a href="projects/benin-saving-rct-hfc/scripts/HFC_Saving_Treatment.do" target="_blank" rel="noopener">HFC script ↗</a>
         <a href="projects/benin-saving-rct-hfc/scripts/Funnel_Attrition_Analysis.do" target="_blank" rel="noopener">Funnel script ↗</a>
@@ -349,17 +366,17 @@
     </div>
     <div class="code-card">
       <div class="tag">Case Study · R</div>
-      <h3>Electoral Representation Case Study — Uttar Pradesh</h3>
-      <p>An applied statistical case study taking electoral microdata end-to-end — cleaning, exploration, and modelling. Measures the share of Muslim candidates fielded by party and constituency across the 2012–2017–2022 elections, maps it with <code>sf</code> choropleths, and runs a regression-discontinuity analysis (<code>rdrobust</code>) with survey weighting.</p>
+      <h3>Electoral Representation Case Study - Uttar Pradesh</h3>
+      <p>An applied statistical case study taking electoral microdata end-to-end - cleaning, exploration, and modelling. Measures the share of Muslim candidates fielded by party and constituency across the 2012-2017-2022 elections, maps it with <code>sf</code> choropleths, and runs a regression-discontinuity analysis (<code>rdrobust</code>) with survey weighting.</p>
       <div style="display:flex; gap:14px; flex-wrap:wrap;">
         <a href="code/case-study-up-elections.R" target="_blank" rel="noopener">R script ↗</a>
-        <a href="https://github.com/JesugnonKoumagnon/Statistical-Analysis" target="_blank" rel="noopener">GitHub ↗</a>
+        <a href="https://github.com/JesugnonKoumagnon/-Case-study-Analysis" target="_blank" rel="noopener">GitHub ↗</a>
       </div>
     </div>
     <div class="code-card">
       <div class="tag">Applied Econometrics · R</div>
       <h3>Impact of a Targeted Training Program on Firm Performance</h3>
-      <p>Evaluates how a management-training program affected firm revenue, sales, employment, and productivity, using a firm-level panel (2010–2019, ~498 firms). Difference-in-differences with two-way fixed effects, an event-study check on parallel trends, and a regression discontinuity at the 100-employee eligibility cutoff. Trained firms gained ~38% revenue and ~38% revenue-per-worker, with employment unchanged.</p>
+      <p>Evaluates how a management-training program affected firm revenue, sales, employment, and productivity, using a firm-level panel (2010-2019, ~498 firms). Difference-in-differences with two-way fixed effects, an event-study check on parallel trends, and a regression discontinuity at the 100-employee eligibility cutoff. Trained firms gained ~38% revenue and ~38% revenue-per-worker, with employment unchanged.</p>
       <div style="display:flex; gap:14px; flex-wrap:wrap;">
         <a href="projects/firm-training-impact/notes.html" target="_blank" rel="noopener">Project notes ↗</a>
         <a href="papers/Firm_Training_Impact_Report.pdf" target="_blank" rel="noopener">Report (PDF) ↗</a>
@@ -368,8 +385,8 @@
     </div>
     <div class="code-card">
       <div class="tag">Geospatial · Python</div>
-      <h3>Maize Yield &amp; Vegetation Indices (MODIS) — Benin &amp; Togo</h3>
-      <p>A geospatial notebook linking MODIS vegetation indices (NDVI / EVI) to maize-yield trends across Benin and Togo. Builds administrative-boundary maps, charts yield variability (1999–2020) against rainfall seasonality, and overlays satellite NDVI rasters using <code>geopandas</code>, <code>xarray</code>, and <code>matplotlib</code>.</p>
+      <h3>Maize Yield &amp; Vegetation Indices (MODIS) - Benin &amp; Togo</h3>
+      <p>A geospatial notebook linking MODIS vegetation indices (NDVI / EVI) to maize-yield trends across Benin and Togo. Builds administrative-boundary maps, charts yield variability (1999-2020) against rainfall seasonality, and overlays satellite NDVI rasters using <code>geopandas</code>, <code>xarray</code>, and <code>matplotlib</code>.</p>
       <div style="display:flex; gap:14px; flex-wrap:wrap;">
         <a href="code/maize-yield-vegetation-modis.html" target="_blank" rel="noopener">View analysis ↗</a>
         <a href="code/maize-yield-vegetation-modis.ipynb" target="_blank" rel="noopener">Notebook (.ipynb) ↗</a>
@@ -382,24 +399,24 @@
 
 <section class="data-glossary">
   <div class="eyebrow">Data sources</div>
-  <h2 style="font-family:var(--serif); font-weight:600; font-size:clamp(26px,3vw,32px); max-width:600px;">Key datasets, <em style="font-style:italic; color:var(--savanna); font-weight:500;">explained.</em></h2>
-  <p style="max-width:600px; color:var(--gray); font-size:14.5px; margin-top:14px;">My work draws on five kinds of data — geospatial and climate, household surveys, administrative and fiscal records, field/RCT data, and medical imaging.</p>
+  <h2 style="font-family:var(--serif); font-weight:600; font-size:clamp(26px,3vw,32px); max-width:600px;">Key datasets, <em style="font-style:italic; color:var(--rose); font-weight:500;">explained.</em></h2>
+  <p style="max-width:600px; color:var(--gray); font-size:14.5px; margin-top:14px;">My work draws on five kinds of data - geospatial and climate, household surveys, administrative and fiscal records, field/RCT data, and medical imaging.</p>
   <div class="glossary-grid">
     <div class="glossary-card">
       <div class="term">ACLED · MODIS · CHIRPS</div>
-      <p>Geospatial &amp; climate sources for the Lake Chad work — conflict events (ACLED), satellite vegetation/temperature (MODIS NDVI), and rainfall/drought (CHIRPS, SPEI).</p>
+      <p>Geospatial &amp; climate sources for the Lake Chad work - conflict events (ACLED), satellite vegetation/temperature (MODIS NDVI), and rainfall/drought (CHIRPS, SPEI).</p>
     </div>
     <div class="glossary-card">
       <div class="term">DHS / EDS</div>
-      <p>Demographic and Health Survey (Enquête Démographique et de Santé) — nationally representative household microdata; the EDS 2021 round underpins the Côte d'Ivoire N-MODA analysis.</p>
+      <p>Demographic and Health Survey (Enquête Démographique et de Santé) - nationally representative household microdata; the EDS 2021 round underpins the Côte d'Ivoire N-MODA analysis.</p>
     </div>
     <div class="glossary-card">
       <div class="term">MICS</div>
-      <p>Multiple Indicator Cluster Surveys — UNICEF-supported household surveys on child and women's well-being, used to track deprivation trends over time.</p>
+      <p>Multiple Indicator Cluster Surveys - UNICEF-supported household surveys on child and women's well-being, used to track deprivation trends over time.</p>
     </div>
     <div class="glossary-card">
       <div class="term">MPI / NBS</div>
-      <p>Multidimensional Poverty Index from Nigeria's National Bureau of Statistics — deprivation across health, education, and living standards, merged with social-register data.</p>
+      <p>Multidimensional Poverty Index from Nigeria's National Bureau of Statistics - deprivation across health, education, and living standards, merged with social-register data.</p>
     </div>
     <div class="glossary-card">
       <div class="term">National Social Register</div>
@@ -407,15 +424,15 @@
     </div>
     <div class="glossary-card">
       <div class="term">Budget &amp; finance-law data</div>
-      <p>National social-sector budget allocations and macro indicators (GDP, inflation, Gini) — the fiscal backbone of the Côte d'Ivoire socioeconomic analysis.</p>
+      <p>National social-sector budget allocations and macro indicators (GDP, inflation, Gini) - the fiscal backbone of the Côte d'Ivoire socioeconomic analysis.</p>
     </div>
     <div class="glossary-card">
       <div class="term">RCT &amp; field-survey data</div>
-      <p>Primary survey data collected via Kobo / ODK / CsPro during field operations and randomized trials — including the Benin savings RCT, monitored with high-frequency quality checks.</p>
+      <p>Primary survey data collected via Kobo / ODK / CsPro during field operations and randomized trials - including the Benin savings RCT, monitored with high-frequency quality checks.</p>
     </div>
     <div class="glossary-card">
       <div class="term">Colposcopy image dataset</div>
-      <p>Clinically annotated colposcopy images from CHUD-B/A Parakou — anonymized medical imaging used to train the cervical-cancer deep-learning models.</p>
+      <p>Clinically annotated colposcopy images from CHUD-B/A Parakou - anonymized medical imaging used to train the cervical-cancer deep-learning models.</p>
     </div>
   </div>
 </section>
@@ -434,5 +451,17 @@
   <div class="copyright">© 2026 Jesugnon David Janvier Koumagnon · Nairobi, Kenya · Last updated June 2026</div>
 </footer>
 
+
+<script>
+  (function(){
+    var nav = document.querySelector('nav');
+    if(nav){ window.addEventListener('scroll', function(){ nav.classList.toggle('scrolled', window.scrollY > 10); }, {passive:true}); }
+    var els = document.querySelectorAll('.focus-card,.project-row,.entry,.paper,.code-card,.glossary-card,.talk-item,.cert-item');
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('in-view'); io.unobserve(e.target); } });
+    }, {threshold:0.08, rootMargin:'0px 0px -40px 0px'});
+    els.forEach(function(el,i){ el.style.transitionDelay = ((i % 4) * 70) + 'ms'; io.observe(el); });
+  })();
+</script>
 </body>
 </html>

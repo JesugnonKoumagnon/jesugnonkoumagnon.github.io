@@ -3,12 +3,12 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Talks — Jesugnon Koumagnon</title>
+<title>Talks - Jesugnon Koumagnon</title>
 <link rel="icon" href="favicon.ico" sizes="any">
 <link rel="icon" type="image/png" href="favicon-32.png" sizes="32x32">
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
-<meta property="og:title" content="Talks — Jesugnon Koumagnon">
-<meta property="og:description" content="Presentations and academic activity — African School of Economics, UNICEF, IMF, World Bank.">
+<meta property="og:title" content="Talks - Jesugnon Koumagnon">
+<meta property="og:description" content="Presentations and academic activity - African School of Economics, UNICEF, IMF, World Bank.">
 <meta property="og:image" content="og-image.jpg">
 <meta property="og:type" content="website">
 <meta name="twitter:card" content="summary_large_image">
@@ -17,8 +17,8 @@
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 <style>
   :root{
-    --ink:#1C1B19; --paper:#F7F3EC; --paper-warm:#F0EAE0;
-    --sienna:#C0532D; --savanna:#3D5A45; --gray:#8A8275; --line:rgba(28,27,25,0.14);
+    --ink:#171A2B; --paper:#FFFFFF; --paper-warm:#FBEAEB;
+    --royal:#3447AA; --rose:#C6517A; --gray:#6B7280; --line:rgba(23,26,43,0.14);
     --serif:'Fraunces',serif; --sans:'Inter',sans-serif; --mono:'JetBrains Mono',monospace;
   }
   *{margin:0;padding:0;box-sizing:border-box;}
@@ -27,20 +27,20 @@
   @media (prefers-reduced-motion: reduce){*{animation-duration:0.01ms !important; transition-duration:0.01ms !important;}}
 
   nav{position:sticky; top:0; z-index:50; display:flex; align-items:center; justify-content:space-between;
-    padding:22px 48px; background:rgba(247,243,236,0.88); backdrop-filter:blur(8px); border-bottom:1px solid var(--line);}
+    padding:22px 48px; background:rgba(255,255,255,0.88); backdrop-filter:blur(8px); border-bottom:1px solid var(--line);}
   .nav-name{font-family:var(--serif); font-weight:600; font-size:18px;}
   .nav-links{display:flex; gap:34px; font-size:14px; font-weight:500;}
   .nav-links a{position:relative; opacity:0.72; transition:opacity .2s;}
   .nav-links a:hover{opacity:1;}
   .nav-links a.active{opacity:1;}
-  .nav-links a.active::after{content:''; position:absolute; left:0; right:0; bottom:-6px; height:2px; background:var(--sienna);}
+  .nav-links a.active::after{content:''; position:absolute; left:0; right:0; bottom:-6px; height:2px; background:var(--royal);}
   @media (max-width:560px){nav{padding:16px 20px;} .nav-links{gap:16px; font-size:12.5px;}}
 
   .page-head{padding:70px 48px 40px; max-width:1180px; margin:0 auto;}
-  .eyebrow{font-family:var(--mono); font-size:12.5px; letter-spacing:0.08em; color:var(--sienna); text-transform:uppercase; margin-bottom:16px; display:flex; align-items:center; gap:10px;}
-  .eyebrow::before{content:''; width:18px; height:1px; background:var(--sienna);}
+  .eyebrow{font-family:var(--mono); font-size:12.5px; letter-spacing:0.08em; color:var(--royal); text-transform:uppercase; margin-bottom:16px; display:flex; align-items:center; gap:10px;}
+  .eyebrow::before{content:''; width:18px; height:1px; background:var(--royal);}
   .page-head h1{font-family:var(--serif); font-weight:600; font-size:clamp(34px,4.4vw,52px); letter-spacing:-0.01em; max-width:680px;}
-  .page-head h1 em{font-style:italic; color:var(--savanna); font-weight:500;}
+  .page-head h1 em{font-style:italic; color:var(--rose); font-weight:500;}
   .page-head p{margin-top:18px; max-width:600px; color:var(--gray); font-size:16px;}
   @media (max-width:760px){.page-head{padding:50px 22px 30px;}}
 
@@ -60,15 +60,32 @@
   .talk-date{font-family:var(--mono); font-size:13px; color:var(--gray); padding-top:2px;}
   .talk-item h3{font-family:var(--serif); font-size:18px; font-weight:600; margin-bottom:6px; line-height:1.4;}
   .talk-item .venue{font-size:13.5px; color:var(--gray);}
-  .talk-item .venue strong{color:var(--savanna);}
+  .talk-item .venue strong{color:var(--rose);}
   @media (max-width:600px){.talk-item{grid-template-columns:1fr; gap:6px;}}
 
   footer{padding:54px 48px; text-align:center;}
   footer h2{font-family:var(--serif); font-weight:600; font-size:clamp(22px,2.8vw,28px); margin-bottom:18px;}
   footer .contact-links{display:flex; gap:28px; justify-content:center; flex-wrap:wrap; font-size:14.5px; font-weight:600; margin-top:18px;}
   footer .contact-links a{padding-bottom:3px; border-bottom:1.5px solid transparent; transition:border-color .2s;}
-  footer .contact-links a:hover{border-color:var(--sienna);}
+  footer .contact-links a:hover{border-color:var(--royal);}
   footer .copyright{margin-top:32px; font-family:var(--mono); font-size:12px; color:var(--gray);}
+
+  /* -- motion: nav shrink on scroll -- */
+  nav{transition:padding .25s ease, box-shadow .25s ease;}
+  nav.scrolled{padding-top:14px !important; padding-bottom:14px !important; box-shadow:0 6px 20px rgba(23,26,43,0.06);}
+
+  /* -- motion: scroll-reveal for repeating content blocks -- */
+  .focus-card,.project-row,.entry,.paper,.code-card,.glossary-card,.talk-item,.cert-item{
+    opacity:0; transform:translateY(18px);
+    transition:opacity .7s cubic-bezier(.16,.84,.44,1), transform .7s cubic-bezier(.16,.84,.44,1);
+  }
+  .focus-card.in-view,.project-row.in-view,.entry.in-view,.paper.in-view,.code-card.in-view,.glossary-card.in-view,.talk-item.in-view,.cert-item.in-view{
+    opacity:1; transform:translateY(0);
+  }
+
+  /* -- motion: page-load entrance for the header area -- */
+  .hero,.page-head{animation:pageIn .8s cubic-bezier(.16,.84,.44,1) both;}
+  @keyframes pageIn{from{opacity:0; transform:translateY(12px);} to{opacity:1; transform:translateY(0);}}
 </style>
 </head>
 <body>
@@ -108,7 +125,7 @@
     <div class="talk-date">2025</div>
     <div>
       <h3>Development of a Web-Based Diagnostic Tool for Real-Time Classification of Colposcopy Images</h3>
-      <div class="venue">Central Hospital of Parakou — presented to research team and partners, <strong>African School of Economics</strong></div>
+      <div class="venue">Central Hospital of Parakou - presented to research team and partners, <strong>African School of Economics</strong></div>
     </div>
   </div>
 
@@ -149,7 +166,7 @@
     <div class="talk-date">May 2023</div>
     <div>
       <h3>Workshop on Private Sector Evolution</h3>
-      <div class="venue">By Dr. Andrew Dabalen, Chief Economist of the Africa Region, <strong>World Bank</strong> — Main Lecture Hall, African School of Economics</div>
+      <div class="venue">By Dr. Andrew Dabalen, Chief Economist of the Africa Region, <strong>World Bank</strong> - Main Lecture Hall, African School of Economics</div>
     </div>
   </div>
 
@@ -169,5 +186,17 @@
   <div class="copyright">© 2026 Jesugnon David Janvier Koumagnon · Nairobi, Kenya · Last updated June 2026</div>
 </footer>
 
+
+<script>
+  (function(){
+    var nav = document.querySelector('nav');
+    if(nav){ window.addEventListener('scroll', function(){ nav.classList.toggle('scrolled', window.scrollY > 10); }, {passive:true}); }
+    var els = document.querySelectorAll('.focus-card,.project-row,.entry,.paper,.code-card,.glossary-card,.talk-item,.cert-item');
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('in-view'); io.unobserve(e.target); } });
+    }, {threshold:0.08, rootMargin:'0px 0px -40px 0px'});
+    els.forEach(function(el,i){ el.style.transitionDelay = ((i % 4) * 70) + 'ms'; io.observe(el); });
+  })();
+</script>
 </body>
 </html>

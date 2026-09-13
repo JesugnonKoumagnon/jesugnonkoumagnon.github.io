@@ -3,12 +3,12 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>CV — Jesugnon Koumagnon</title>
+<title>CV - Jesugnon Koumagnon</title>
 <link rel="icon" href="favicon.ico" sizes="any">
 <link rel="icon" type="image/png" href="favicon-32.png" sizes="32x32">
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
-<meta property="og:title" content="CV — Jesugnon Koumagnon">
-<meta property="og:description" content="Researcher and Data Analyst — Economics, Statistics & Social Policy.">
+<meta property="og:title" content="CV - Jesugnon Koumagnon">
+<meta property="og:description" content="Quantitative Data Scientist &amp; Social Policy Researcher - Climate Resilience, Social Protection &amp; Development Economics in Africa.">
 <meta property="og:image" content="og-image.jpg">
 <meta property="og:type" content="website">
 <meta name="twitter:card" content="summary_large_image">
@@ -17,69 +17,84 @@
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 <style>
   :root{
-    --ink:#1C1B19; --paper:#F7F3EC; --paper-warm:#F0EAE0;
-    --sienna:#C0532D; --savanna:#3D5A45; --gray:#8A8275; --line:rgba(28,27,25,0.14);
+    --ink:#171A2B; --paper:#FFFFFF; --paper-warm:#FBEAEB;
+    --royal:#3447AA; --royal-deep:#25316E; --rose:#C6517A; --gray:#6B7280; --line:rgba(23,26,43,0.14);
     --serif:'Fraunces',serif; --sans:'Inter',sans-serif; --mono:'JetBrains Mono',monospace;
   }
   *{margin:0;padding:0;box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
   body{background:var(--paper); color:var(--ink); font-family:var(--sans); line-height:1.6; -webkit-font-smoothing:antialiased;}
   a{color:inherit; text-decoration:none;}
+  @media (prefers-reduced-motion: reduce){*{animation-duration:0.01ms !important; transition-duration:0.01ms !important;}}
 
   nav{position:sticky; top:0; z-index:50; display:flex; align-items:center; justify-content:space-between;
-    padding:22px 48px; background:rgba(247,243,236,0.92); backdrop-filter:blur(8px); border-bottom:1px solid var(--line);}
+    padding:22px 48px; background:rgba(255,255,255,0.92); backdrop-filter:blur(8px); border-bottom:1px solid var(--line);
+    transition:padding .25s ease, box-shadow .25s ease;}
+  nav.scrolled{padding:14px 48px; box-shadow:0 6px 20px rgba(23,26,43,0.06);}
   .nav-name{font-family:var(--serif); font-weight:600; font-size:18px;}
   .nav-links{display:flex; gap:34px; font-size:14px; font-weight:500; align-items:center;}
   .nav-links a{position:relative; opacity:0.72; transition:opacity .2s;}
   .nav-links a:hover{opacity:1;}
   .nav-links a.active{opacity:1;}
-  .nav-links a.active::after{content:''; position:absolute; left:0; right:0; bottom:-6px; height:2px; background:var(--sienna);}
-  .print-btn{font-family:var(--sans); font-weight:600; font-size:13px; background:var(--ink); color:var(--paper); padding:9px 18px; border-radius:3px;}
+  .nav-links a.active::after{content:''; position:absolute; left:0; right:0; bottom:-6px; height:2px; background:var(--royal);}
+  .print-btn{font-family:var(--sans); font-weight:600; font-size:13px; background:var(--royal); color:#fff; padding:9px 18px; border-radius:3px; transition:background .2s, transform .2s;}
+  .print-btn:hover{background:var(--royal-deep); transform:translateY(-2px);}
   @media (max-width:760px){nav{padding:18px 22px;} .nav-links{gap:14px; font-size:12px;}}
   @media print{nav{display:none;}}
 
   .cv-wrap{max-width:880px; margin:0 auto; padding:60px 48px 100px;}
   @media (max-width:760px){.cv-wrap{padding:40px 22px 70px;}}
 
-  .cv-header{border-bottom:2px solid var(--ink); padding-bottom:28px; margin-bottom:36px;}
-  .cv-header h1{font-family:var(--serif); font-weight:700; font-size:clamp(32px,4.4vw,42px); letter-spacing:-0.01em;}
-  .cv-header .role{font-family:var(--mono); font-size:13.5px; color:var(--sienna); margin-top:8px; letter-spacing:0.02em;}
-  .cv-contact{display:flex; flex-wrap:wrap; gap:18px; margin-top:18px; font-size:13.5px; color:var(--gray);}
-  .cv-contact a{color:var(--ink); border-bottom:1px solid var(--line);}
+  .cv-header{border-bottom:2px solid var(--ink); padding-bottom:28px; margin-bottom:36px; position:relative;}
+  .cv-header::before{content:''; position:absolute; left:0; bottom:-2px; width:64px; height:2px; background:var(--royal);}
+  .cv-header h1{font-family:var(--serif); font-weight:700; font-size:clamp(30px,4.2vw,40px); letter-spacing:-0.01em;}
+  .cv-header .role{font-family:var(--mono); font-size:13px; color:var(--royal); margin-top:10px; letter-spacing:0.01em; line-height:1.6; max-width:640px;}
+  .cv-contact{display:flex; flex-wrap:wrap; gap:8px 18px; margin-top:18px; font-size:13px; color:var(--gray);}
+  .cv-contact a{color:var(--ink); border-bottom:1px solid var(--line); transition:border-color .2s, color .2s;}
+  .cv-contact a:hover{color:var(--royal); border-color:var(--royal);}
+  .cv-contact span.sep{opacity:.5;}
 
-  .cv-section{margin-bottom:38px;}
+  .cv-section{margin-bottom:34px; opacity:0; transform:translateY(14px); transition:opacity .6s ease, transform .6s ease;}
+  .cv-section.in-view{opacity:1; transform:translateY(0);}
   .cv-section h2{
-    font-family:var(--mono); font-size:12.5px; letter-spacing:0.08em; text-transform:uppercase;
-    color:var(--savanna); margin-bottom:18px; display:flex; align-items:center; gap:10px;
+    font-family:var(--mono); font-size:12px; letter-spacing:0.09em; text-transform:uppercase;
+    color:var(--rose); margin-bottom:16px; display:flex; align-items:center; gap:10px;
   }
   .cv-section h2::after{content:''; flex:1; height:1px; background:var(--line);}
 
   .quals{padding-left:0; list-style:none;}
-  .quals li{font-size:14.5px; color:#3a3733; padding:6px 0 6px 18px; position:relative; line-height:1.65;}
-  .quals li::before{content:'—'; position:absolute; left:0; color:var(--sienna);}
+  .quals li{font-size:13.5px; color:#262B3D; padding:5px 0 5px 18px; position:relative; line-height:1.65;}
+  .quals li::before{content:'-'; position:absolute; left:0; color:var(--royal); font-weight:700;}
+  .quals li strong{color:var(--ink); font-weight:600;}
 
-  .entry{display:grid; grid-template-columns:170px 1fr; gap:24px; margin-bottom:26px;}
-  .entry-meta{font-size:13px; color:var(--gray); line-height:1.6;}
-  .entry-meta .org{font-weight:600; color:var(--ink); display:block; margin-bottom:2px;}
-  .entry h3{font-family:var(--serif); font-weight:600; font-size:17px; margin-bottom:4px;}
-  .entry .sub{font-family:var(--mono); font-size:11.5px; color:var(--sienna); text-transform:uppercase; letter-spacing:0.03em; margin-bottom:10px; display:block;}
+  .entry{display:grid; grid-template-columns:172px 1fr; gap:24px; margin-bottom:24px;}
+  .entry-meta{font-size:12.5px; color:var(--gray); line-height:1.6;}
+  .entry-meta .org{font-weight:600; color:var(--ink); display:block; margin-bottom:2px; font-size:13.5px;}
+  .entry h3{font-family:var(--serif); font-weight:600; font-size:16.5px; margin-bottom:4px;}
+  .entry .sub{font-family:var(--mono); font-size:11px; color:var(--royal); text-transform:uppercase; letter-spacing:0.03em; margin-bottom:9px; display:block;}
   .entry ul{padding-left:16px;}
-  .entry li{font-size:13.5px; color:#4a4742; padding:3px 0; line-height:1.6;}
-  .entry p.note{font-size:13.5px; color:#4a4742; line-height:1.65;}
+  .entry li{font-size:13px; color:#383F52; padding:3px 0; line-height:1.6;}
+  .entry p.note{font-size:13px; color:#383F52; line-height:1.65;}
   @media (max-width:640px){.entry{grid-template-columns:1fr; gap:6px;}}
 
   .skills-tags{display:flex; flex-wrap:wrap; gap:8px;}
-  .skills-tags span{font-family:var(--mono); font-size:12px; color:var(--savanna); background:rgba(61,90,69,0.08); padding:5px 11px; border-radius:20px;}
+  .skills-tags span{font-family:var(--mono); font-size:12px; color:var(--rose); background:rgba(198,81,122,0.10); padding:5px 11px; border-radius:20px; transition:background .2s, color .2s;}
+  .skills-tags span:hover{background:var(--rose); color:#fff;}
 
   .pub-list{list-style:none;}
-  .cert-grid{display:grid; grid-template-columns:repeat(2,1fr); gap:1px; background:var(--line); border:1px solid var(--line); margin-top:8px;}
-  .cert-item{background:var(--paper); padding:16px 18px; display:flex; flex-direction:column; gap:4px;}
-  .cert-item strong{font-size:13.5px; line-height:1.4;}
-  .cert-item span{font-size:12px; color:var(--gray);}
-  .cert-item span.cred{font-family:var(--mono); font-size:10.5px; color:#a89e8f;}
-  @media (max-width:640px){.cert-grid{grid-template-columns:1fr;}}
-  .pub-list li{font-size:13.5px; color:#4a4742; padding:8px 0; border-bottom:1px solid var(--line); line-height:1.6;}
+  .pub-list li{font-size:13px; color:#383F52; padding:10px 0; border-bottom:1px solid var(--line); line-height:1.6;}
   .pub-list li:last-child{border-bottom:none;}
-  .pub-list .pub-year{font-family:var(--mono); color:var(--sienna); margin-right:8px;}
+  .pub-list li strong{color:var(--ink);}
+  .pub-list .pub-meta{font-family:var(--mono); font-size:10.5px; color:var(--royal); text-transform:uppercase; letter-spacing:0.03em; display:block; margin-bottom:4px;}
+
+  .cert-grid{display:grid; grid-template-columns:repeat(2,1fr); gap:1px; background:var(--line); border:1px solid var(--line); margin-top:8px;}
+  .cert-item{background:var(--paper); padding:14px 18px; display:flex; flex-direction:column; gap:3px; transition:background .2s;}
+  .cert-item:hover{background:var(--paper-warm);}
+  .cert-item strong{font-size:13px; line-height:1.4;}
+  .cert-item span{font-size:11.5px; color:var(--gray);}
+  @media (max-width:640px){.cert-grid{grid-template-columns:1fr;}}
+
+  .intro-note{font-size:13px; color:var(--gray); margin-bottom:14px; line-height:1.6;}
 
   footer{padding:40px 48px; text-align:center; font-family:var(--mono); font-size:12px; color:var(--gray);}
   @media print{footer{display:none;}}
@@ -87,7 +102,7 @@
 </head>
 <body>
 
-<nav>
+<nav id="mainNav">
   <div class="nav-name">Jesugnon Koumagnon</div>
   <div class="nav-links">
     <a href="index.html">Home</a>
@@ -102,118 +117,30 @@
 
   <div class="cv-header">
     <h1>Jesugnon David Janvier Koumagnon</h1>
-    <div class="role">Researcher &amp; Data Analyst — Economics, Statistics &amp; Social Policy</div>
+    <div class="role">Quantitative Data Scientist &amp; Social Policy Researcher | Climate Resilience, Social Protection &amp; Development Economics in Africa</div>
     <div class="cv-contact">
-      <span>Nairobi, Kenya</span>
+      <a href="https://jesugnonkoumagnon.github.io/" target="_blank" rel="noopener">jesugnonkoumagnon.github.io</a>
+      <span class="sep">·</span>
+      <span>+254 07 05 88 72 66</span>
+      <span class="sep">·</span>
       <a href="mailto:dkoumagnon@africanschoolofeconomics.com">dkoumagnon@africanschoolofeconomics.com</a>
-      <span>+229 01 61 06 94 61</span>
+      <span class="sep">·</span>
+      <span>Nairobi, Kenya (available for international relocation)</span>
+      <span class="sep">·</span>
       <a href="https://www.linkedin.com/in/jesugnon" target="_blank" rel="noopener">LinkedIn</a>
     </div>
   </div>
 
   <div class="cv-section">
-    <h2>Key Qualifications</h2>
+    <h2>Technical Skills</h2>
     <ul class="quals">
-      <li>Research interests include climate resilience, development policy, social protection, and evidence-based decision-making in Africa.</li>
-      <li>Strong background in applied statistics, economics, and data analysis, with experience in social policy, poverty, and development projects at UNICEF and academic institutions.</li>
-      <li>Expertise in causal inference, econometrics, research design (including RCTs), survey and data management, statistical modelling, GIS mapping, and data visualization.</li>
-      <li>Strong skills in machine and deep learning.</li>
-      <li>Multi-country experience: Benin, Côte d'Ivoire, Ghana, Nigeria, Sudan.</li>
-      <li>Fluent in English and French; basic Spanish.</li>
+      <li><strong>Econometrics &amp; Causal Inference:</strong> panel fixed effects, spatial lag/autocorrelation, difference-in-differences, regression discontinuity, RCT design, impact evaluation, discriminant analysis, hypothesis testing</li>
+      <li><strong>Machine Learning &amp; Data Science:</strong> deep learning (CNN, transfer learning), supervised &amp; unsupervised learning, classification and prediction models, ETL pipelines, statistical modelling</li>
+      <li><strong>Data, Survey &amp; GIS Tools:</strong> R, Stata, Python, SQL, Power BI, R Shiny, QGIS, SPSS, SAP, LaTeX, Kobocollect, ODK, CsPro</li>
+      <li><strong>Domain Focus:</strong> climate resilience and conflict, multidimensional poverty and social protection, humanitarian needs assessment (MSNA, JMMI, FSLN, MIA), public finance for children</li>
+      <li><strong>Field Experience:</strong> Benin, Côte d'Ivoire, Ghana, Nigeria, Sudan</li>
+      <li><strong>Languages:</strong> French (fluent), English (fluent, C1), Spanish (basic)</li>
     </ul>
-  </div>
-
-  <div class="cv-section">
-    <h2>Toolkit</h2>
-    <div class="skills-tags">
-      <span>R</span><span>Stata</span><span>Python</span><span>SQL</span><span>SPSS</span>
-      <span>Power BI</span><span>QGIS</span><span>SAP</span><span>LaTeX</span>
-      <span>Kobocollect</span><span>CsPro</span><span>ODK</span>
-    </div>
-  </div>
-
-  <div class="cv-section">
-    <h2>Professional Experience</h2>
-
-    <div class="entry">
-      <div class="entry-meta"><span class="org">Impact Initiatives</span>Port Sudan<br>Jan 2026 – Present</div>
-      <div>
-        <h3>Data Officer</h3>
-        <span class="sub">Research Cycle Management · Data Management · Information Management</span>
-        <ul>
-          <li>Built sampling strategies with assessment and GIS teams for MSNA and JMMI research cycles.</li>
-          <li>Set up R-based data analysis workflows for data cleaning and management.</li>
-          <li>Wrote R scripts for cleaning, descriptive statistics, hypothesis testing, and regressions; helped automate analysis steps.</li>
-          <li>Designed dashboards and information products; supported partners with information management.</li>
-        </ul>
-      </div>
-    </div>
-
-    <div class="entry">
-      <div class="entry-meta"><span class="org">African School of Economics</span>Abomey-Calavi<br>Feb – Sep 2025</div>
-      <div>
-        <h3>Research Assistant</h3>
-        <span class="sub">Cervical Cancer Early Detection, CHUD Parakou</span>
-        <ul>
-          <li>Contributed to data collection and literature review; designed data analysis plan and method selection.</li>
-          <li>Processed imaging data using ImageJ to identify regions of interest.</li>
-          <li>Presented findings to the research team and partners to support funding for scale-up.</li>
-        </ul>
-      </div>
-    </div>
-
-    <div class="entry">
-      <div class="entry-meta"><span class="org">UNICEF</span>Abidjan, Côte d'Ivoire<br>Jul 2024 – Jan 2025</div>
-      <div>
-        <h3>Social Policy Intern</h3>
-        <span class="sub">N-MODA Child Poverty Analysis</span>
-        <ul>
-          <li>Analyzed multidimensional child poverty data for 5,000+ households, producing policy briefs with 10+ recommendations.</li>
-          <li>Led the data analysis behind Côte d'Ivoire's official N-MODA report (3rd edition), validated Dec 2024.</li>
-          <li>Mapped MPI distribution and deprivation changes across districts; designed an interactive R Shiny dashboard tracking 20+ social indicators.</li>
-          <li>Developed and tested survey tools; participated in high-level government meetings on the national poverty report.</li>
-        </ul>
-      </div>
-    </div>
-
-    <div class="entry">
-      <div class="entry-meta"><span class="org">African School of Economics</span>Abomey-Calavi<br>Feb – Aug 2024</div>
-      <div>
-        <h3>Research Assistant</h3>
-        <span class="sub">Household Electricity Connection &amp; RCT Data</span>
-        <ul>
-          <li>Cleaned and analyzed large survey and census datasets in Stata; mapped treatment distribution in R.</li>
-          <li>Prepared field activities, trained enumerators, and ran daily automated data quality checks.</li>
-        </ul>
-      </div>
-    </div>
-
-    <div class="entry">
-      <div class="entry-meta"><span class="org">Faith Services</span>Accra, Ghana<br>Nov 2020 – Jan 2023</div>
-      <div>
-        <h3>Data and Research Assistant</h3>
-        <ul>
-          <li>Created and managed databases using SQL and MongoDB; analyzed data using machine learning models.</li>
-          <li>Developed data collection tools in CsPro; trained enumerators and managed RCT systems.</li>
-        </ul>
-      </div>
-    </div>
-
-    <div class="entry">
-      <div class="entry-meta"><span class="org">Directorate General of the Treasury, Benin</span>Cotonou<br>May – Oct 2021</div>
-      <div>
-        <h3>Statistics Intern</h3>
-        <p class="note">Produced weekly and quarterly revenue forecasts; prepared activity and situation reports for the department.</p>
-      </div>
-    </div>
-
-    <div class="entry">
-      <div class="entry-meta"><span class="org">National Institute of Agricultural Research, Benin</span>Abomey-Calavi<br>Jul – Sep 2021</div>
-      <div>
-        <h3>Statistics Intern</h3>
-        <p class="note">Conducted discriminant analysis in R; designed CsPro data entry systems; trained staff on digital data collection.</p>
-      </div>
-    </div>
   </div>
 
   <div class="cv-section">
@@ -222,69 +149,201 @@
     <div class="entry">
       <div class="entry-meta"><span class="org">WorldQuant University</span>USA<br>In Progress</div>
       <div>
-        <h3>MSc, Financial Engineering</h3>
-        <p class="note">Coursework: Financial Markets/Econometrics, Stochastic Modelling, Machine &amp; Deep Learning, Risk &amp; Portfolio Management. Capstone (draft): "Impact of climate change on health financing systems in Africa."</p>
+        <h3>Master of Science in Financial Engineering</h3>
+        <ul>
+          <li>Chosen to build advanced technical skills in machine learning, deep learning, and quantitative modelling for use in economic and social-policy analysis.</li>
+          <li>Coursework: Financial Markets &amp; Data Econometrics, Stochastic Modelling, Machine and Deep Learning, Risk and Portfolio Management.</li>
+          <li>Capstone (draft): "Impact of Climate Change on Health Financing Systems in Africa."</li>
+        </ul>
       </div>
     </div>
 
     <div class="entry">
-      <div class="entry-meta"><span class="org">African School of Economics</span>Abomey-Calavi<br>Jan 2023 – Sep 2025</div>
+      <div class="entry-meta"><span class="org">African School of Economics</span>Abomey-Calavi<br>January 2023 - September 2025</div>
       <div>
-        <h3>Master's Degree, Mathematics, Economics &amp; Statistics</h3>
-        <p class="note">Coursework: Econometrics, Convexity &amp; Optimization, Impact Evaluation, Quantitative Finance. Research: "Boko Haram and Climate Change around Lake Chad."</p>
+        <h3>Master's Degree in Mathematics, Economics and Statistics</h3>
+        <ul>
+          <li>Coursework: Econometrics, Convexity and Optimization, Impact Evaluation, Quantitative Finance.</li>
+          <li>Thesis: "Deep Learning for Cervical Cancer Screening: A Web-Based Colposcopy Diagnostic Tool." Compared three deep-learning pipelines (U-Net + SVM, CYENET, VGG-19 transfer learning) on 1,800 annotated colposcopy images across six diagnostic classes; the best model reached 89.17% accuracy and was deployed as a real-time, four-language web tool for clinicians.</li>
+          <li>Working paper: "Boko Haram Violence and Climate Change in the Lake Chad Region" - district- and cell-level panel analysis (2009-2022, 92 districts, 4 countries) linking drought and temperature anomalies to conflict intensity. Presented at ASE, 2024.</li>
+        </ul>
       </div>
     </div>
 
     <div class="entry">
-      <div class="entry-meta"><span class="org">Parakou University</span>Parakou<br>Dec 2017 – Dec 2020</div>
+      <div class="entry-meta"><span class="org">Parakou University</span>Parakou<br>December 2017 - December 2020</div>
       <div>
-        <h3>BSc, Applied Statistics</h3>
-        <p class="note">Research: "Impact of mobile money services in Benin's agricultural sector — case of small farmers."</p>
+        <h3>Bachelor of Science in Applied Statistics</h3>
+        <ul>
+          <li>Coursework: Econometrics, Multidimensional Analysis, Statistics, Programming.</li>
+          <li>Thesis: "Impact of Mobile Money Services in Benin's Agricultural Sector: The Case of Smallholder Farmers" - applied impact-evaluation methods to measure changes in farmer welfare.</li>
+        </ul>
+      </div>
+    </div>
+
+    <p class="intro-note">Applied Data Science Lab, WorldQuant University - 2023 &nbsp;|&nbsp; Professional English, Level C1, Seed Institute of Languages, Accra - 2022</p>
+  </div>
+
+  <div class="cv-section">
+    <h2>Professional Experience</h2>
+
+    <div class="entry">
+      <div class="entry-meta"><span class="org">Impact Initiatives</span>Port Sudan<br>January 2026 - Present</div>
+      <div>
+        <h3>Data Officer</h3>
+        <ul>
+          <li>Manage the research cycle for a portfolio of humanitarian assessments across Sudan (Kordofan, Darfur, White Nile), from sampling design through data collection, cleaning, and reporting, working with assessment and GIS teams.</li>
+          <li>Led sampling design and tool preparation for the Multi-Sector Needs Assessment (MSNA) and a Rapid Needs Assessment.</li>
+          <li>Directed data collection and cleaning for a Food Security, Livelihoods and Nutrition Assessment across 10 localities in Kordofan.</li>
+          <li>Ran two displacement-site movement-intention surveys in White Nile and a third across North and West Kordofan and Darfur; mapped IDP sites and disaggregated population figures by gender and age group to flag priority needs by location.</li>
+          <li>Led data collection, cleaning, and analysis for the Joint Market Monitoring Initiative (JMMI) across Sudan.</li>
+          <li>Built a real-time JMMI monitoring dashboard pulling directly from the KoboToolbox API, surfacing data inconsistencies as they occur and tracking price-collection coverage by district during active data collection.</li>
+          <li>Designed and maintained R-based workflows for data cleaning, descriptive statistics, hypothesis testing, correlation, and regression analysis, used across the assessment portfolio; trained assessment staff on these practices.</li>
+          <li>Designed dashboards and information products from assessment data for internal teams and external partners.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="entry">
+      <div class="entry-meta"><span class="org">UNICEF</span>Abidjan<br>July 2024 - January 2025</div>
+      <div>
+        <h3>Social Policy Intern</h3>
+        <ul>
+          <li>Led the underlying data analysis for Côte d'Ivoire's official N-MODA (National Multiple Overlapping Deprivation Analysis) report, using EDS 2021 survey data and the MODA methodology across 7 deprivation dimensions for children aged 0-17.</li>
+          <li>Found that 8.6 million children (62.5% of those under 18) experience multidimensional poverty, with deprivation highest among children aged 0-4 (68%) and consistently higher for girls in the health dimension (57%); mapped deprivation by region against the 2016 MICS round.</li>
+          <li>Built a companion analysis linking fiscal and macroeconomic trends to child well-being: despite 44% real GDP growth (2019-2024), the social-sector budget share fell from 28.7% to 22.7%, with education's share dropping from 17.3% to 12.4%; modeled a spending-increase scenario projecting primary completion recovering to 80.3% in 2025.</li>
+          <li>Designed an interactive R Shiny dashboard tracking 20+ social indicators for UNICEF teams, and developed and tested survey tools for poverty data collection.</li>
+          <li>Produced a policy brief with 10+ recommendations for government social programs, presented at the National Seminar on Multidimensional Poverty; contributed to Women's Economic Empowerment and Cash Transfer Assistance initiatives in northern Côte d'Ivoire.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="entry">
+      <div class="entry-meta"><span class="org">African School of Economics</span>Abomey-Calavi<br>February - September 2025</div>
+      <div>
+        <h3>Research Assistant</h3>
+        <ul>
+          <li>Collected and processed colposcopy imaging data at CHUD-B/A Parakou hospital to support cervical cancer early detection, with local oncology clinicians.</li>
+          <li>Built and compared three deep-learning classification pipelines (U-Net + SVM, CYENET, VGG-19 transfer learning) on 1,800 annotated images across six diagnostic classes; the best model reached 89.17% accuracy, with a Grad-CAM overlay added to highlight the affected region for clinicians.</li>
+          <li>Deployed the model in a four-language (French, English, Fon, Yoruba) web tool built with React and FastAPI for clinical use.</li>
+          <li>Presented findings and a funding case to the research team and university partners to support scaling the tool beyond Parakou.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="entry">
+      <div class="entry-meta"><span class="org">African School of Economics</span>Abomey-Calavi<br>February - August 2024</div>
+      <div>
+        <h3>Research Assistant</h3>
+        <ul>
+          <li>Supported a randomized controlled trial on household electricity-connection decisions: cleaned and analyzed survey and census data in Stata, and mapped treatment distribution in R.</li>
+          <li>Ran daily automated data-quality checks in the field, helped prepare field activities, and trained enumerators.</li>
+          <li>Supported administrative preparation of research files and academic seminars.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="entry">
+      <div class="entry-meta"><span class="org">Faith Services</span>Accra, Ghana<br>November 2020 - January 2023</div>
+      <div>
+        <h3>Data and Research Assistant</h3>
+        <ul>
+          <li>Collected, cleaned, and reported on data measuring the impact of ethnic-group-based action on access to justice and on the incidence of violence.</li>
+          <li>Built econometric and machine learning models of economic growth and of the impact of youth skills on employment transitions, for classification and prediction tasks.</li>
+          <li>Created and managed project databases in SQL and MongoDB.</li>
+          <li>Developed data collection tools in CsPro, trained enumerators, and managed RCT data systems.</li>
+        </ul>
       </div>
     </div>
   </div>
 
   <div class="cv-section">
-    <h2>Presentations &amp; Publications</h2>
-    <ul class="pub-list">
-      <li><span class="pub-year">2024</span>Boko Haram and Climate Change around Lake Chad — presented at African School of Economics, Abomey-Calavi.</li>
-      <li><span class="pub-year">2025</span>Development of a Web-Based Diagnostic Tool for Real-Time Classification of Colposcopy Images, Central Hospital of Parakou — African School of Economics.</li>
-      <li><span class="pub-year">In progress</span>Conflicts and Climate Change in WAEMU Space: a spatial analysis integrating natural resources.</li>
-      <li><span class="pub-year">—</span>Multidimensional Poverty and Social Protection Coverage in Nigeria — accessible upon request.</li>
+    <h2>Additional Experience</h2>
+    <ul class="quals">
+      <li><strong>Statistics Intern, Directorate General of the Treasury and Public Accounting of Benin, Cotonou (May - October 2021):</strong> produced weekly and quarterly revenue forecasts and department situation reports.</li>
+      <li><strong>Statistics Intern, National Institute of Agricultural Research of Benin, Abomey-Calavi (July - September 2021):</strong> ran discriminant analysis in R; designed CsPro data-entry systems and trained staff on digital collection tools.</li>
     </ul>
   </div>
 
   <div class="cv-section">
-    <h2>Licenses &amp; Certifications (22)</h2>
+    <h2>Leadership and Volunteering</h2>
+    <ul class="quals">
+      <li>Representative and lead of the Student Research Group, African School of Economics.</li>
+      <li>Farmer Assistant, SCOMAP - crop development, pest analysis and prediction, market analysis.</li>
+    </ul>
+  </div>
+
+  <div class="cv-section">
+    <h2>Training &amp; Certifications</h2>
     <div class="cert-grid">
-      <div class="cert-item"><strong>Evaluating Impact in Low- and Middle-Income Countries</strong><span>The World Bank Group · Jun 2026</span><span class="cred">Credential ID 88e1c0ba88744d81a9f5981dd955e287</span></div>
-      <div class="cert-item"><strong>Foundations of Financial Engineering</strong><span>WorldQuant University · Jul 2025</span></div>
-      <div class="cert-item"><strong>Network Science and Economic Complexity for Policy</strong><span>United Nations University–MERIT · Mar 2025</span></div>
-      <div class="cert-item"><strong>EF SET English Certificate 62/100 (C1 Advanced)</strong><span>EF SET · Mar 2025</span></div>
-      <div class="cert-item"><strong>Finance &amp; Quantitative Modeling for Analysts Specialization</strong><span>University of Pennsylvania · Oct 2024</span><span class="cred">Credential ID MH93O5LXKTMK</span></div>
-      <div class="cert-item"><strong>Traitement de données niveau 2</strong><span>FORCE-N Sénégal · Dec 2023</span></div>
-      <div class="cert-item"><strong>Reproducible Research Fundamentals</strong><span>The World Bank Group · Dec 2023</span></div>
-      <div class="cert-item"><strong>Applied Data Science Lab</strong><span>WorldQuant University · Dec 2023</span></div>
-      <div class="cert-item"><strong>Spatial Data Science: The New Frontier in Analytics</strong><span>Esri · Oct 2023</span></div>
-      <div class="cert-item"><strong>Manage Successful Field Research</strong><span>The World Bank Group · Jun 2023</span></div>
-      <div class="cert-item"><strong>La Gestion des Risques pour Renforcer la Reprise Post-COVID-19</strong><span>IDEP — African Institute for Economic Development and Planning · Nov 2022</span><span class="cred">Credential ID I8qdzL4vlp</span></div>
-      <div class="cert-item"><strong>SQL Fundamentals Course</strong><span>Dataquest.io · Nov 2022</span><span class="cred">Credential ID PNSJMI019T9NFB1MLSS7</span></div>
-      <div class="cert-item"><strong>Python for Data Science: Intermediate Course</strong><span>Dataquest.io · Jul 2022</span><span class="cred">Credential ID P26V7I8YYPG8BU7IEDFT</span></div>
-      <div class="cert-item"><strong>Development Economics Course for Sub-Saharan Africa</strong><span>IZA@LISER Network · Nov 2021</span></div>
-      <div class="cert-item"><strong>Survey Solutions for Computer-Assisted Personal Interviewing (CAPI)</strong><span>Asian Development Bank · May 2021</span></div>
-      <div class="cert-item"><strong>CSPro for Computer-Assisted Personal Interviewing (CAPI)</strong><span>Asian Development Bank · May 2021</span></div>
-      <div class="cert-item"><strong>Les ODD dans les politiques publiques</strong><span>Institut de la Francophonie pour le développement durable (IFDD) · Jun 2021</span></div>
-      <div class="cert-item"><strong>Analyse multidimensionnelle de données</strong><span>L'Institut Agro Rennes-Angers · Oct 2020</span></div>
-      <div class="cert-item"><strong>Travaillez efficacement en équipe</strong><span>OpenClassrooms · Feb 2020</span><span class="cred">Credential ID 3482342126</span></div>
-      <div class="cert-item"><strong>Réalisez une analyse exploratoire de données</strong><span>Ensae-Ensai Formation Continue (Cepe) · Nov 2019</span><span class="cred">Credential ID 5827960757</span></div>
-      <div class="cert-item"><strong>Réalisez des modélisations de données performantes</strong><span>Ensae-Ensai Formation Continue (Cepe) · Nov 2019</span><span class="cred">Credential ID 4412823125</span></div>
-      <div class="cert-item"><strong>Réalisez des rapports statistiques clairs et impactants</strong><span>Ensae-Ensai Formation Continue (Cepe) · Oct 2019</span><span class="cred">Credential ID 7809096743</span></div>
+      <div class="cert-item"><strong>Public Finance for Children (PF4C)</strong><span>UNICEF · Online · 2026</span></div>
+      <div class="cert-item"><strong>Evaluating Impact in Low- and Middle-Income Countries</strong><span>World Bank Group (WBGx) · Online · 2026</span></div>
+      <div class="cert-item"><strong>Data Analytics Certificate</strong><span>IBM SkillsBuild / American Council on Education, 8 credit hours (data classification, usability, preparation, inferential statistics, visualization) · Online · 2026</span></div>
+      <div class="cert-item"><strong>Results-Based Management (RBM)</strong><span>UN Women · Online · 2024</span></div>
+      <div class="cert-item"><strong>Fundamentals of Quantitative Modelling</strong><span>University of Pennsylvania · Online · 2024</span></div>
+      <div class="cert-item"><strong>Macroeconomic Diagnostics</strong><span>International Monetary Fund (IMF) · Online · 2024</span></div>
+      <div class="cert-item"><strong>Fundamentals of Reproducible Research</strong><span>DIME, World Bank · Online · 2024</span></div>
+      <div class="cert-item"><strong>Managing Successful Field Research</strong><span>DIME, World Bank · Online · 2023</span></div>
+      <div class="cert-item"><strong>Development Economics for Sub-Saharan Africa</strong><span>Institute of Labor Economics (IZA) · Online · 2022</span></div>
+      <div class="cert-item"><strong>Introduction to Machine Learning with Python; Python for Data Science (Intermediate)</strong><span>Dataquest · Online · 2022</span></div>
+      <div class="cert-item"><strong>Survey Solutions for Computer-Assisted Personal Interviewing (CAPI)</strong><span>Asian Development Bank · Online · 2022</span></div>
     </div>
+  </div>
+
+  <div class="cv-section">
+    <h2>Seminars, Workshops &amp; Conferences</h2>
+    <ul class="quals">
+      <li>Workshop on Research Methods and Data Management, African School of Economics, 2024</li>
+      <li>Seminar on Child Poverty and Policy Responses, UNICEF Côte d'Ivoire, Abidjan, 2024</li>
+      <li>Evaluation of the Economic Situation in Benin, IMF, 2024</li>
+      <li>Workshop on Private Sector Evolution, Dr. Andrew Dabalen (Chief Economist, Africa Region, World Bank), ASE, 2023</li>
+    </ul>
+  </div>
+
+  <div class="cv-section">
+    <h2>Research Papers &amp; Working Papers</h2>
+    <ul class="pub-list">
+      <li>
+        <span class="pub-meta">Working Paper · 2024</span>
+        <strong>"Boko Haram Violence and Climate Change in the Lake Chad Region."</strong>
+        District- and cell-level fixed-effects panel analysis (2009-2022, 92 districts, 4 countries) using ACLED conflict data and MODIS/CHIRPS climate data; finds drought and temperature anomalies predict conflict intensity, with the effect nearly doubling in high-cropland districts. Presented at ASE, Abomey-Calavi, 2024.
+      </li>
+      <li>
+        <span class="pub-meta">Policy Brief · 2025</span>
+        <strong>"Multidimensional Poverty and Social Protection Assistance in Nigeria."</strong>
+        State-level analysis (37 states) merging NBS poverty data with social-register and program-beneficiary data; finds 47.4% of Nigeria's poor are unregistered for assistance, with the highest-poverty states receiving the lowest program coverage. Available on request.
+      </li>
+      <li>
+        <strong>High-Frequency Checks for RCT Field Monitoring, Benin Savings RCT.</strong>
+        Stata pipeline for real-time data-quality monitoring during a savings-behavior RCT: duplicate detection, skip-pattern validation, and an attrition funnel, built to catch enumeration issues during fieldwork.
+      </li>
+    </ul>
+  </div>
+
+  <div class="cv-section">
+    <h2>Technical &amp; Applied Projects</h2>
+    <p class="intro-note">Additional applied projects, with code and write-ups on the portfolio linked above:</p>
+    <ul class="quals">
+      <li><strong>Impact of a Targeted Training Program on Firm Performance</strong> - difference-in-differences and regression-discontinuity analysis of a firm-level panel (498 firms, 2010-2019); trained firms saw approximately 38% revenue gains.</li>
+      <li><strong>Maize Yield &amp; Vegetation Indices (MODIS), Benin &amp; Togo</strong> - Python/geospatial analysis linking satellite vegetation indices to maize-yield trends, 1999-2020.</li>
+    </ul>
   </div>
 
 </div>
 
-<footer>© 2026 Jesugnon David Janvier Koumagnon · Last updated June 2026</footer>
+<footer>© 2026 Jesugnon David Janvier Koumagnon · Nairobi, Kenya · Last updated September 2026</footer>
+
+<script>
+  const nav = document.getElementById('mainNav');
+  window.addEventListener('scroll', () => {
+    nav.classList.toggle('scrolled', window.scrollY > 10);
+  }, { passive: true });
+
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in-view'); io.unobserve(e.target); } });
+  }, { threshold: 0.08, rootMargin: '0px 0px -40px 0px' });
+  document.querySelectorAll('.cv-section').forEach(el => io.observe(el));
+</script>
 
 </body>
 </html>
