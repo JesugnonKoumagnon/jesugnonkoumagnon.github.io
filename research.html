@@ -17,8 +17,8 @@
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 <style>
   :root{
-    --ink:#171A2B; --paper:#FFFFFF; --paper-warm:#FBEAEB;
-    --royal:#3447AA; --rose:#C6517A; --gray:#6B7280; --line:rgba(23,26,43,0.14);
+    --ink:#25272C; --paper:#FFFFFF; --panel:#EAFBF5;
+    --mint:#B8F7E4; --mint-deep:#0B7A66; --mint-hover:#086355; --gray:#6B7280; --line:rgba(37,39,44,0.14);
     --serif:'Fraunces',serif; --sans:'Inter',sans-serif; --mono:'JetBrains Mono',monospace;
   }
   *{margin:0;padding:0;box-sizing:border-box;}
@@ -27,22 +27,32 @@
   @media (prefers-reduced-motion: reduce){*{animation-duration:0.01ms !important; transition-duration:0.01ms !important;}}
 
   nav{position:sticky; top:0; z-index:50; display:flex; align-items:center; justify-content:space-between;
-    padding:22px 48px; background:rgba(255,255,255,0.88); backdrop-filter:blur(8px); border-bottom:1px solid var(--line);}
-  .nav-name{font-family:var(--serif); font-weight:600; font-size:18px;}
+    padding:22px 48px; background:var(--ink); border-bottom:1px solid rgba(255,255,255,0.07);}
+  .nav-name{font-family:var(--serif); font-weight:600; font-size:18px; color:#fff;}
   .nav-links{display:flex; gap:34px; font-size:14px; font-weight:500;}
-  .nav-links a{position:relative; opacity:0.72; transition:opacity .2s;}
-  .nav-links a:hover{opacity:1;}
-  .nav-links a.active{opacity:1;}
-  .nav-links a.active::after{content:''; position:absolute; left:0; right:0; bottom:-6px; height:2px; background:var(--royal);}
+  .nav-links a{position:relative; color:rgba(255,255,255,0.72); transition:color .2s, opacity .2s;}
+  .nav-links a:hover{color:#fff;}
+  .nav-links a.active{color:#fff;}
+  .nav-links a.active::after{content:''; position:absolute; left:0; right:0; bottom:-6px; height:2px; background:var(--mint);}
   @media (max-width:760px){nav{padding:18px 22px;} .nav-links{gap:18px; font-size:12.5px;}}
 
   .page-head{padding:70px 48px 40px; max-width:1180px; margin:0 auto;}
-  .eyebrow{font-family:var(--mono); font-size:12.5px; letter-spacing:0.08em; color:var(--royal); text-transform:uppercase; margin-bottom:16px; display:flex; align-items:center; gap:10px;}
-  .eyebrow::before{content:''; width:18px; height:1px; background:var(--royal);}
+  .eyebrow{font-family:var(--mono); font-size:12.5px; letter-spacing:0.08em; color:var(--mint-deep); text-transform:uppercase; margin-bottom:16px; display:flex; align-items:center; gap:10px;}
+  .eyebrow::before{content:''; width:18px; height:1px; background:var(--mint-deep);}
   .page-head h1{font-family:var(--serif); font-weight:600; font-size:clamp(34px,4.4vw,52px); letter-spacing:-0.01em; max-width:680px;}
-  .page-head h1 em{font-style:italic; color:var(--rose); font-weight:500;}
+  .page-head h1 em{font-style:italic; color:var(--mint-deep); font-weight:500;}
   .page-head p{margin-top:18px; max-width:600px; color:var(--gray); font-size:16px;}
   @media (max-width:760px){.page-head{padding:50px 22px 30px;}}
+  .jump-nav{display:flex; gap:10px; flex-wrap:wrap; margin-top:28px; overflow-x:auto; padding-bottom:4px;}
+  .jump-nav a{
+    font-family:var(--mono); font-size:11.5px; white-space:nowrap; display:inline-flex; align-items:center; gap:8px;
+    padding:8px 14px; border-radius:20px; border:1px solid var(--line); color:var(--ink); opacity:.7;
+    transition:background .2s ease, border-color .2s ease, opacity .2s ease, transform .2s ease;
+  }
+  .jump-nav a:hover{opacity:1; border-color:var(--mint-deep); transform:translateY(-2px);}
+  .jump-nav a.active{opacity:1; background:var(--mint); border-color:var(--mint); color:var(--ink);}
+  .jump-nav .jn-year{color:var(--mint-hover); font-weight:600;}
+  .jump-nav a.active .jn-year{color:var(--ink);}
 
   .divider{height:1px; background:var(--line); max-width:1180px; margin:0 auto;}
 
@@ -53,20 +63,20 @@
   .paper h2{font-family:var(--serif); font-weight:600; font-size:clamp(24px,2.6vw,30px); margin-bottom:16px; letter-spacing:-0.01em;}
   .paper .lede{font-size:15.5px; color:#383F52; line-height:1.75; margin-bottom:20px;}
   .paper .finding{
-    background:var(--paper-warm); border-left:3px solid var(--royal); padding:16px 20px; margin-bottom:22px;
+    background:var(--panel); border-left:3px solid var(--mint-deep); padding:16px 20px; margin-bottom:22px;
     font-size:14.5px; line-height:1.7;
   }
-  .paper .finding strong{color:var(--royal); font-family:var(--mono); font-size:11.5px; letter-spacing:0.04em; text-transform:uppercase; display:block; margin-bottom:6px;}
-  .paper h4{font-family:var(--mono); font-size:11.5px; letter-spacing:0.05em; text-transform:uppercase; color:var(--rose); margin:22px 0 10px;}
+  .paper .finding strong{color:var(--mint-deep); font-family:var(--mono); font-size:11.5px; letter-spacing:0.04em; text-transform:uppercase; display:block; margin-bottom:6px;}
+  .paper h4{font-family:var(--mono); font-size:11.5px; letter-spacing:0.05em; text-transform:uppercase; color:var(--mint-deep); margin:22px 0 10px;}
   .paper ul{padding-left:18px; margin-bottom:6px;}
   .paper li{font-size:14.5px; color:#383F52; padding:4px 0; line-height:1.6;}
   .pill-row{display:flex; gap:8px; flex-wrap:wrap; margin-top:18px;}
-  .pill{font-family:var(--mono); font-size:11px; color:var(--rose); background:rgba(198,81,122,0.10); padding:4px 10px; border-radius:20px;}
+  .pill{font-family:var(--mono); font-size:11px; color:var(--mint-deep); background:rgba(184,247,228,0.45); padding:4px 10px; border-radius:20px;}
   .paper-links{margin-top:22px; display:flex; gap:20px; flex-wrap:wrap; font-size:13.5px; font-weight:600;}
-  .paper-links a{color:var(--royal); border-bottom:1.5px solid transparent; padding-bottom:2px; transition:border-color .2s;}
-  .paper-links a:hover{border-color:var(--royal);}
+  .paper-links a{color:var(--mint-deep); border-bottom:1.5px solid transparent; padding-bottom:2px; transition:border-color .2s;}
+  .paper-links a:hover{border-color:var(--mint-deep);}
   .credit-note{font-size:13px; color:var(--gray); font-style:italic; margin-top:18px; line-height:1.6;}
-  .paper-map{margin:20px 0; border:1px solid var(--line); border-radius:4px; overflow:hidden; background:var(--paper-warm);}
+  .paper-map{margin:20px 0; border:1px solid var(--line); border-radius:4px; overflow:hidden; background:var(--panel);}
   .paper-map img{width:100%; display:block;}
   .paper-map figcaption{font-family:var(--mono); font-size:11.5px; color:var(--gray); padding:10px 14px; border-top:1px solid var(--line);}
 
@@ -78,27 +88,27 @@
   .code-section{padding:64px 48px; max-width:1180px; margin:0 auto;}
   .code-grid{display:grid; grid-template-columns:repeat(2,1fr); gap:1px; background:var(--line); border:1px solid var(--line); margin-top:32px;}
   .code-card{background:var(--paper); padding:26px; display:flex; flex-direction:column;}
-  .code-card .tag{font-family:var(--mono); font-size:11px; color:var(--royal); letter-spacing:0.04em; text-transform:uppercase; margin-bottom:10px;}
+  .code-card .tag{font-family:var(--mono); font-size:11px; color:var(--mint-deep); letter-spacing:0.04em; text-transform:uppercase; margin-bottom:10px;}
   .code-card h3{font-family:var(--serif); font-size:17px; font-weight:600; margin-bottom:8px; line-height:1.3;}
   .code-card p{font-size:13px; color:var(--gray); line-height:1.6; flex:1; margin-bottom:14px;}
-  .code-card a{font-size:13px; font-weight:600; color:var(--royal);}
+  .code-card a{font-size:13px; font-weight:600; color:var(--mint-deep);}
   .code-card a:hover{text-decoration:underline;}
   @media (max-width:760px){.code-grid{grid-template-columns:1fr;}}
   .glossary-grid{display:grid; grid-template-columns:repeat(2,1fr); gap:1px; background:var(--line); border:1px solid var(--line); margin-top:32px;}
   .glossary-card{background:var(--paper); padding:24px;}
-  .glossary-card .term{font-family:var(--mono); font-weight:600; font-size:13.5px; color:var(--royal); margin-bottom:8px;}
+  .glossary-card .term{font-family:var(--mono); font-weight:600; font-size:13.5px; color:var(--mint-deep); margin-bottom:8px;}
   .glossary-card p{font-size:13.5px; color:var(--gray); line-height:1.6;}
   @media (max-width:760px){.glossary-grid{grid-template-columns:1fr;}}
 
   footer{padding:54px 48px; text-align:center;}
   footer .contact-links{display:flex; gap:28px; justify-content:center; flex-wrap:wrap; font-size:14.5px; font-weight:600; margin-top:18px;}
   footer .contact-links a{padding-bottom:3px; border-bottom:1.5px solid transparent; transition:border-color .2s;}
-  footer .contact-links a:hover{border-color:var(--royal);}
+  footer .contact-links a:hover{border-color:var(--mint-deep);}
   footer .copyright{margin-top:32px; font-family:var(--mono); font-size:12px; color:var(--gray);}
 
   /* -- motion: nav shrink on scroll -- */
-  nav{transition:padding .25s ease, box-shadow .25s ease;}
-  nav.scrolled{padding-top:14px !important; padding-bottom:14px !important; box-shadow:0 6px 20px rgba(23,26,43,0.06);}
+  nav{transition:box-shadow .25s ease;}
+  nav.scrolled{box-shadow:0 10px 28px rgba(0,0,0,0.28);}
 
   /* -- motion: scroll-reveal for repeating content blocks -- */
   .focus-card,.project-row,.entry,.paper,.code-card,.glossary-card,.talk-item,.cert-item{
@@ -112,9 +122,21 @@
   /* -- motion: page-load entrance for the header area -- */
   .hero,.page-head{animation:pageIn .8s cubic-bezier(.16,.84,.44,1) both;}
   @keyframes pageIn{from{opacity:0; transform:translateY(12px);} to{opacity:1; transform:translateY(0);}}
+
+  /* -- motion: top scroll-progress bar -- */
+  .scroll-progress{position:fixed; top:0; left:0; height:3px; width:0%; z-index:200;
+    background:linear-gradient(90deg,var(--mint-deep),var(--mint)); transition:width .1s ease-out;}
+
+  /* -- motion: card hover lift (snappier than the entrance transition) -- */
+  .focus-card,.code-card,.glossary-card,.cert-item{transition:opacity .7s cubic-bezier(.16,.84,.44,1), transform .7s cubic-bezier(.16,.84,.44,1);}
+  .focus-card:hover,.code-card:hover,.glossary-card:hover{
+    transform:translateY(-6px); box-shadow:0 16px 32px rgba(37,39,44,0.10);
+    transition:transform .25s ease, box-shadow .25s ease;
+  }
 </style>
 </head>
 <body>
+<div class="scroll-progress" id="scrollProgress"></div>
 
 <nav>
   <div class="nav-name">Jesugnon Koumagnon</div>
@@ -130,6 +152,14 @@
   <div class="eyebrow">Selected work</div>
   <h1>Research &amp; <em>applied projects.</em></h1>
   <p>Empirical and data-science work spanning climate and conflict, poverty and social protection, humanitarian data systems, and machine learning for health - combining econometrics, GIS, survey and RCT data, and deep learning across Sub-Saharan Africa.</p>
+  <div class="jump-nav" role="navigation" aria-label="Jump to project">
+    <a href="#impact"><span class="jn-year">2026</span>Sudan · Impact Initiatives</a>
+    <a href="#cervical"><span class="jn-year">2025</span>Cervical Cancer Screening</a>
+    <a href="#nigeria"><span class="jn-year">2025</span>Nigeria MPI</a>
+    <a href="#unicef"><span class="jn-year">2024</span>N-MODA, Côte d'Ivoire</a>
+    <a href="#socioeco"><span class="jn-year">2024</span>Budgets &amp; Growth</a>
+    <a href="#lakechad"><span class="jn-year">2024</span>Lake Chad</a>
+  </div>
 </div>
 
 <div class="divider"></div>
@@ -352,7 +382,7 @@
 
 <section class="code-section">
   <div class="eyebrow">Code &amp; notebooks</div>
-  <h2 style="font-family:var(--serif); font-weight:600; font-size:clamp(26px,3vw,32px); max-width:600px;">Applied analysis, <em style="font-style:italic; color:var(--rose); font-weight:500;">in code.</em></h2>
+  <h2 style="font-family:var(--serif); font-weight:600; font-size:clamp(26px,3vw,32px); max-width:600px;">Applied analysis, <em style="font-style:italic; color:var(--mint-deep); font-weight:500;">in code.</em></h2>
   <div class="code-grid">
     <div class="code-card">
       <div class="tag">RCT Field Monitoring</div>
@@ -399,7 +429,7 @@
 
 <section class="data-glossary">
   <div class="eyebrow">Data sources</div>
-  <h2 style="font-family:var(--serif); font-weight:600; font-size:clamp(26px,3vw,32px); max-width:600px;">Key datasets, <em style="font-style:italic; color:var(--rose); font-weight:500;">explained.</em></h2>
+  <h2 style="font-family:var(--serif); font-weight:600; font-size:clamp(26px,3vw,32px); max-width:600px;">Key datasets, <em style="font-style:italic; color:var(--mint-deep); font-weight:500;">explained.</em></h2>
   <p style="max-width:600px; color:var(--gray); font-size:14.5px; margin-top:14px;">My work draws on five kinds of data - geospatial and climate, household surveys, administrative and fiscal records, field/RCT data, and medical imaging.</p>
   <div class="glossary-grid">
     <div class="glossary-card">
@@ -461,6 +491,42 @@
       entries.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('in-view'); io.unobserve(e.target); } });
     }, {threshold:0.08, rootMargin:'0px 0px -40px 0px'});
     els.forEach(function(el,i){ el.style.transitionDelay = ((i % 4) * 70) + 'ms'; io.observe(el); });
+  })();
+</script>
+
+<script>
+  (function(){
+    var bar = document.getElementById('scrollProgress');
+    function update(){
+      var h = document.documentElement;
+      var scrolled = h.scrollTop;
+      var height = h.scrollHeight - h.clientHeight;
+      var pct = height > 0 ? (scrolled / height) * 100 : 0;
+      if (bar) bar.style.width = pct + '%';
+    }
+    window.addEventListener('scroll', update, {passive:true});
+    window.addEventListener('resize', update);
+    update();
+  })();
+</script>
+
+<script>
+  (function(){
+    var links = document.querySelectorAll('.jump-nav a');
+    if(!links.length) return;
+    var map = {};
+    links.forEach(function(a){ map[a.getAttribute('href').slice(1)] = a; });
+    var sio = new IntersectionObserver(function(entries){
+      entries.forEach(function(e){
+        var link = map[e.target.id];
+        if(!link) return;
+        if(e.isIntersecting){
+          links.forEach(function(a){ a.classList.remove('active'); });
+          link.classList.add('active');
+        }
+      });
+    }, {threshold:0, rootMargin:'-45% 0px -50% 0px'});
+    document.querySelectorAll('article.paper[id]').forEach(function(a){ sio.observe(a); });
   })();
 </script>
 </body>

@@ -17,8 +17,8 @@
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 <style>
   :root{
-    --ink:#171A2B; --paper:#FFFFFF; --paper-warm:#FBEAEB;
-    --royal:#3447AA; --royal-deep:#25316E; --rose:#C6517A; --gray:#6B7280; --line:rgba(23,26,43,0.14);
+    --ink:#25272C; --paper:#FFFFFF; --panel:#EAFBF5;
+    --mint:#B8F7E4; --mint-deep:#0B7A66; --mint-hover:#086355; --gray:#6B7280; --line:rgba(37,39,44,0.14);
     --serif:'Fraunces',serif; --sans:'Inter',sans-serif; --mono:'JetBrains Mono',monospace;
   }
   *{margin:0;padding:0;box-sizing:border-box;}
@@ -28,17 +28,17 @@
   @media (prefers-reduced-motion: reduce){*{animation-duration:0.01ms !important; transition-duration:0.01ms !important;}}
 
   nav{position:sticky; top:0; z-index:50; display:flex; align-items:center; justify-content:space-between;
-    padding:22px 48px; background:rgba(255,255,255,0.92); backdrop-filter:blur(8px); border-bottom:1px solid var(--line);
-    transition:padding .25s ease, box-shadow .25s ease;}
-  nav.scrolled{padding:14px 48px; box-shadow:0 6px 20px rgba(23,26,43,0.06);}
-  .nav-name{font-family:var(--serif); font-weight:600; font-size:18px;}
+    padding:22px 48px; background:var(--ink); border-bottom:1px solid rgba(255,255,255,0.07);
+    transition:box-shadow .25s ease;}
+  nav.scrolled{box-shadow:0 10px 28px rgba(0,0,0,0.28);}
+  .nav-name{font-family:var(--serif); font-weight:600; font-size:18px; color:#fff;}
   .nav-links{display:flex; gap:34px; font-size:14px; font-weight:500; align-items:center;}
-  .nav-links a{position:relative; opacity:0.72; transition:opacity .2s;}
-  .nav-links a:hover{opacity:1;}
-  .nav-links a.active{opacity:1;}
-  .nav-links a.active::after{content:''; position:absolute; left:0; right:0; bottom:-6px; height:2px; background:var(--royal);}
-  .print-btn{font-family:var(--sans); font-weight:600; font-size:13px; background:var(--royal); color:#fff; padding:9px 18px; border-radius:3px; transition:background .2s, transform .2s;}
-  .print-btn:hover{background:var(--royal-deep); transform:translateY(-2px);}
+  .nav-links a{position:relative; color:rgba(255,255,255,0.72); transition:color .2s, opacity .2s;}
+  .nav-links a:hover{color:#fff;}
+  .nav-links a.active{color:#fff;}
+  .nav-links a.active::after{content:''; position:absolute; left:0; right:0; bottom:-6px; height:2px; background:var(--mint);}
+  .print-btn{font-family:var(--sans); font-weight:600; font-size:13px; background:var(--mint); color:var(--ink); padding:9px 18px; border-radius:3px; transition:background .2s, transform .2s;}
+  .print-btn:hover{background:#fff; transform:translateY(-2px);}
   @media (max-width:760px){nav{padding:18px 22px;} .nav-links{gap:14px; font-size:12px;}}
   @media print{nav{display:none;}}
 
@@ -46,50 +46,50 @@
   @media (max-width:760px){.cv-wrap{padding:40px 22px 70px;}}
 
   .cv-header{border-bottom:2px solid var(--ink); padding-bottom:28px; margin-bottom:36px; position:relative;}
-  .cv-header::before{content:''; position:absolute; left:0; bottom:-2px; width:64px; height:2px; background:var(--royal);}
+  .cv-header::before{content:''; position:absolute; left:0; bottom:-2px; width:64px; height:2px; background:var(--mint-deep);}
   .cv-header h1{font-family:var(--serif); font-weight:700; font-size:clamp(30px,4.2vw,40px); letter-spacing:-0.01em;}
-  .cv-header .role{font-family:var(--mono); font-size:13px; color:var(--royal); margin-top:10px; letter-spacing:0.01em; line-height:1.6; max-width:640px;}
+  .cv-header .role{font-family:var(--mono); font-size:13px; color:var(--mint-deep); margin-top:10px; letter-spacing:0.01em; line-height:1.6; max-width:640px;}
   .cv-contact{display:flex; flex-wrap:wrap; gap:8px 18px; margin-top:18px; font-size:13px; color:var(--gray);}
   .cv-contact a{color:var(--ink); border-bottom:1px solid var(--line); transition:border-color .2s, color .2s;}
-  .cv-contact a:hover{color:var(--royal); border-color:var(--royal);}
+  .cv-contact a:hover{color:var(--mint-deep); border-color:var(--mint-deep);}
   .cv-contact span.sep{opacity:.5;}
 
   .cv-section{margin-bottom:34px; opacity:0; transform:translateY(14px); transition:opacity .6s ease, transform .6s ease;}
   .cv-section.in-view{opacity:1; transform:translateY(0);}
   .cv-section h2{
     font-family:var(--mono); font-size:12px; letter-spacing:0.09em; text-transform:uppercase;
-    color:var(--rose); margin-bottom:16px; display:flex; align-items:center; gap:10px;
+    color:var(--mint-deep); margin-bottom:16px; display:flex; align-items:center; gap:10px;
   }
   .cv-section h2::after{content:''; flex:1; height:1px; background:var(--line);}
 
   .quals{padding-left:0; list-style:none;}
   .quals li{font-size:13.5px; color:#262B3D; padding:5px 0 5px 18px; position:relative; line-height:1.65;}
-  .quals li::before{content:'-'; position:absolute; left:0; color:var(--royal); font-weight:700;}
+  .quals li::before{content:'-'; position:absolute; left:0; color:var(--mint-deep); font-weight:700;}
   .quals li strong{color:var(--ink); font-weight:600;}
 
   .entry{display:grid; grid-template-columns:172px 1fr; gap:24px; margin-bottom:24px;}
   .entry-meta{font-size:12.5px; color:var(--gray); line-height:1.6;}
   .entry-meta .org{font-weight:600; color:var(--ink); display:block; margin-bottom:2px; font-size:13.5px;}
   .entry h3{font-family:var(--serif); font-weight:600; font-size:16.5px; margin-bottom:4px;}
-  .entry .sub{font-family:var(--mono); font-size:11px; color:var(--royal); text-transform:uppercase; letter-spacing:0.03em; margin-bottom:9px; display:block;}
+  .entry .sub{font-family:var(--mono); font-size:11px; color:var(--mint-deep); text-transform:uppercase; letter-spacing:0.03em; margin-bottom:9px; display:block;}
   .entry ul{padding-left:16px;}
   .entry li{font-size:13px; color:#383F52; padding:3px 0; line-height:1.6;}
   .entry p.note{font-size:13px; color:#383F52; line-height:1.65;}
   @media (max-width:640px){.entry{grid-template-columns:1fr; gap:6px;}}
 
   .skills-tags{display:flex; flex-wrap:wrap; gap:8px;}
-  .skills-tags span{font-family:var(--mono); font-size:12px; color:var(--rose); background:rgba(198,81,122,0.10); padding:5px 11px; border-radius:20px; transition:background .2s, color .2s;}
-  .skills-tags span:hover{background:var(--rose); color:#fff;}
+  .skills-tags span{font-family:var(--mono); font-size:12px; color:var(--mint-deep); background:rgba(184,247,228,0.45); padding:5px 11px; border-radius:20px; transition:background .2s, color .2s;}
+  .skills-tags span:hover{background:var(--mint-deep); color:#fff;}
 
   .pub-list{list-style:none;}
   .pub-list li{font-size:13px; color:#383F52; padding:10px 0; border-bottom:1px solid var(--line); line-height:1.6;}
   .pub-list li:last-child{border-bottom:none;}
   .pub-list li strong{color:var(--ink);}
-  .pub-list .pub-meta{font-family:var(--mono); font-size:10.5px; color:var(--royal); text-transform:uppercase; letter-spacing:0.03em; display:block; margin-bottom:4px;}
+  .pub-list .pub-meta{font-family:var(--mono); font-size:10.5px; color:var(--mint-deep); text-transform:uppercase; letter-spacing:0.03em; display:block; margin-bottom:4px;}
 
   .cert-grid{display:grid; grid-template-columns:repeat(2,1fr); gap:1px; background:var(--line); border:1px solid var(--line); margin-top:8px;}
   .cert-item{background:var(--paper); padding:14px 18px; display:flex; flex-direction:column; gap:3px; transition:background .2s;}
-  .cert-item:hover{background:var(--paper-warm);}
+  .cert-item:hover{background:var(--panel);}
   .cert-item strong{font-size:13px; line-height:1.4;}
   .cert-item span{font-size:11.5px; color:var(--gray);}
   @media (max-width:640px){.cert-grid{grid-template-columns:1fr;}}
@@ -97,10 +97,38 @@
   .intro-note{font-size:13px; color:var(--gray); margin-bottom:14px; line-height:1.6;}
 
   footer{padding:40px 48px; text-align:center; font-family:var(--mono); font-size:12px; color:var(--gray);}
-  @media print{footer{display:none;}}
+
+  /* -- print: exact one-page-flowing output, no blank trailing page -- */
+  @media print{
+    @page{margin:14mm 12mm;}
+    html,body{height:auto !important;}
+    nav, footer, .scroll-progress{display:none !important;}
+    .cv-wrap{max-width:100%; padding:0 !important; margin:0 !important;}
+    .cv-section{
+      opacity:1 !important; transform:none !important; transition:none !important;
+      animation:none !important; margin-bottom:20px !important; break-inside:avoid;
+    }
+    .cv-header{animation:none !important; break-inside:avoid;}
+    .entry{break-inside:avoid;}
+    .cert-grid{break-inside:avoid;}
+    a{color:var(--ink) !important;}
+    .cv-contact a, .cert-item, .quals li::before{color:inherit;}
+  }
+
+  /* -- motion: top scroll-progress bar -- */
+  .scroll-progress{position:fixed; top:0; left:0; height:3px; width:0%; z-index:200;
+    background:linear-gradient(90deg,var(--mint-deep),var(--mint)); transition:width .1s ease-out;}
+
+  /* -- motion: card hover lift (snappier than the entrance transition) -- */
+  .focus-card,.code-card,.glossary-card,.cert-item{transition:opacity .7s cubic-bezier(.16,.84,.44,1), transform .7s cubic-bezier(.16,.84,.44,1);}
+  .focus-card:hover,.code-card:hover,.glossary-card:hover{
+    transform:translateY(-6px); box-shadow:0 16px 32px rgba(37,39,44,0.10);
+    transition:transform .25s ease, box-shadow .25s ease;
+  }
 </style>
 </head>
 <body>
+<div class="scroll-progress" id="scrollProgress"></div>
 
 <nav id="mainNav">
   <div class="nav-name">Jesugnon Koumagnon</div>
@@ -121,11 +149,7 @@
     <div class="cv-contact">
       <a href="https://jesugnonkoumagnon.github.io/" target="_blank" rel="noopener">jesugnonkoumagnon.github.io</a>
       <span class="sep">·</span>
-      <span>+254 07 05 88 72 66</span>
-      <span class="sep">·</span>
       <a href="mailto:dkoumagnon@africanschoolofeconomics.com">dkoumagnon@africanschoolofeconomics.com</a>
-      <span class="sep">·</span>
-      <span>Nairobi, Kenya (available for international relocation)</span>
       <span class="sep">·</span>
       <a href="https://www.linkedin.com/in/jesugnon" target="_blank" rel="noopener">LinkedIn</a>
     </div>
@@ -139,7 +163,7 @@
       <li><strong>Data, Survey &amp; GIS Tools:</strong> R, Stata, Python, SQL, Power BI, R Shiny, QGIS, SPSS, SAP, LaTeX, Kobocollect, ODK, CsPro</li>
       <li><strong>Domain Focus:</strong> climate resilience and conflict, multidimensional poverty and social protection, humanitarian needs assessment (MSNA, JMMI, FSLN, MIA), public finance for children</li>
       <li><strong>Field Experience:</strong> Benin, Côte d'Ivoire, Ghana, Nigeria, Sudan</li>
-      <li><strong>Languages:</strong> French (fluent), English (fluent, C1), Spanish (basic)</li>
+      <li><strong>Languages:</strong> French (fluent), English (fluent, C1)</li>
     </ul>
   </div>
 
@@ -287,6 +311,7 @@
       <div class="cert-item"><strong>Development Economics for Sub-Saharan Africa</strong><span>Institute of Labor Economics (IZA) · Online · 2022</span></div>
       <div class="cert-item"><strong>Introduction to Machine Learning with Python; Python for Data Science (Intermediate)</strong><span>Dataquest · Online · 2022</span></div>
       <div class="cert-item"><strong>Survey Solutions for Computer-Assisted Personal Interviewing (CAPI)</strong><span>Asian Development Bank · Online · 2022</span></div>
+      <div class="cert-item"><strong>Multidimensional Data Analysis with R</strong><span>Institut Agro Rennes-Angers (Agrocampus Ouest) · FUN MOOC · Online · 2020</span></div>
     </div>
   </div>
 
@@ -345,5 +370,21 @@
   document.querySelectorAll('.cv-section').forEach(el => io.observe(el));
 </script>
 
+
+<script>
+  (function(){
+    var bar = document.getElementById('scrollProgress');
+    function update(){
+      var h = document.documentElement;
+      var scrolled = h.scrollTop;
+      var height = h.scrollHeight - h.clientHeight;
+      var pct = height > 0 ? (scrolled / height) * 100 : 0;
+      if (bar) bar.style.width = pct + '%';
+    }
+    window.addEventListener('scroll', update, {passive:true});
+    window.addEventListener('resize', update);
+    update();
+  })();
+</script>
 </body>
 </html>
