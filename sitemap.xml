@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url><loc>https://jesugnonkoumagnon.github.io/</loc><priority>1.0</priority></url>
+  <url><loc>https://jesugnonkoumagnon.github.io/research.html</loc><priority>0.9</priority></url>
+  <url><loc>https://jesugnonkoumagnon.github.io/cv.html</loc><priority>0.9</priority></url>
+  <url><loc>https://jesugnonkoumagnon.github.io/talks.html</loc><priority>0.7</priority></url>
+  <url><loc>https://jesugnonkoumagnon.github.io/projects/benin-saving-rct-hfc/notes.html</loc><priority>0.5</priority></url>
+  <url><loc>https://jesugnonkoumagnon.github.io/projects/boko-haram-climate-lakechad/notes.html</loc><priority>0.5</priority></url>
+  <url><loc>https://jesugnonkoumagnon.github.io/projects/cervical-cancer-colposcopy/notes.html</loc><priority>0.5</priority></url>
+  <url><loc>https://jesugnonkoumagnon.github.io/projects/firm-training-impact/notes.html</loc><priority>0.5</priority></url>
+  <url><loc>https://jesugnonkoumagnon.github.io/projects/nigeria-mpi-social-protection/notes.html</loc><priority>0.5</priority></url>
+  <url><loc>https://jesugnonkoumagnon.github.io/projects/unicef-poverty-dashboard/notes.html</loc><priority>0.5</priority></url>
+</urlset>
