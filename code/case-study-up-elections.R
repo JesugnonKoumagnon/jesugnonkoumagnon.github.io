@@ -16,7 +16,7 @@ for (j in listofpackages){
     }
 
 # setting the working directory
-setwd("C:/Users/Admiral/Music/Files_Code")
+setwd("C:/Users/Admiral/Files_Code")
 
 #Loading the electoral database
 election_data <- read_csv("electoral/up.csv")
