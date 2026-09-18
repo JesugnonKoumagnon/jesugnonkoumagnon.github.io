@@ -35,7 +35,7 @@ for (j in listofpackages) {
 
 
 # Working directory
-setwd("C:/Users/Admiral/Desktop/Coding_Task_Jesugnon/Stanford_Data_Task_2025/Stanford_Data_Task_2025")
+setwd("C:/Users/Admiral/Desktop/Coding_Task_Jesugnon/Data_Task_2025")
 
 # ==========================
 # 00. Create folders
